@@ -4,13 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Core Requirements...//
+    
         List <int> numbers = new List<int> ();
 
         int userNumber = -1;
         while (userNumber != 0)
         {
-            Console.Write("Enter a number (0 to Quit): ");
+            Console.Write("Enter any numbers to a list (Enter 0 to quit): ");
 
             string userInput = Console.ReadLine();
             userNumber = int.Parse(userInput);
@@ -42,7 +42,6 @@ class Program
         Console.WriteLine($"The maximum is: {max}");
 
 
-        // Stretch Challenge...//
         int smallestNumber = 99999999;
         foreach (int number in numbers)
         {
