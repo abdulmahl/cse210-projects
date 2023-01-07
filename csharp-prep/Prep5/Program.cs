@@ -38,8 +38,8 @@ class Program
         return square;
     }
 
-    static void DisplayResults(string name, int square)
+    static void DisplayResults(string userName, int squaredNumber)
     {
-        Console.WriteLine($"{name}, The square of your number is {square}.");
+        Console.WriteLine($"{userName}, The square of your number is {squaredNumber}.");
     }
 }
