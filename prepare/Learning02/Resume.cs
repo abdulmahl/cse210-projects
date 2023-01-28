@@ -1,20 +1,18 @@
 using System;
+using static System.Console;
 
-public class Resume 
-{
-    public string _personName;
-
-    public List<Job> _jobs = new List<Job>();
-
-    public void Display()
+public class Resume
     {
-        Console.WriteLine($"Name: {_personName}");
-        Console.WriteLine("jobs:");
+        public string _personName = "";
 
-        foreach(Job job in _jobs)
+        public List<Job> _jobs = new List<Job>();
+        public void ShowResume()
         {
-            job.Display();
+            WriteLine(_personName);
+            WriteLine("Jobs: ");
+            foreach (Job job in _jobs)
+            {
+                job.showJob();
+            }
         }
     }
-
-}

@@ -1,15 +1,17 @@
 using System;
+using static System.Console;
 
 public class Job
     {
-        public string _companyName = "";
-        public string _jobTitle = "";
-        public int _startYear;
-        public int _endYear;
+        public string _jobTitle;
+        public string _companyName;
+        public int _yearStart;
+        public int _yearEnd;
+        public string _currentYear;
 
-        public void Display()
+        public void showJob()
         {
-            Console.WriteLine($"{_companyName} {_jobTitle}, {_startYear}-{_endYear}");
+            WriteLine($"{_jobTitle} ({_companyName}), {_yearStart} - {_yearEnd}"); 
         }
 
     }
