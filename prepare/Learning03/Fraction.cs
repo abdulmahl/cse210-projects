@@ -1,5 +1,4 @@
 using System;
-using static System.Console;
 
 
 public class Fraction
@@ -8,7 +7,7 @@ public class Fraction
     private int _top;
     private int _bottom;
 
-    // Constructor that takes no - arguments.
+    // Constructor that takes no - arguments (parameters).
     public Fraction()
     {
         _top = 1;
@@ -21,42 +20,43 @@ public class Fraction
         _top = wholeNumber;
         _bottom = 1;
     }
-    // Constructor that takes two parameter.
+    // Constructor that takes two parameters (arguments).
     public Fraction(int top, int bottom)
     {
         _top = top;
         _bottom = bottom;
     }
 
-    // Get the value of top.
+    // Returns the value of top.
     public int GetTop()
     {
         return _top;
     }    
 
-    // Manipulate the value of top
+    // Allows the manipulation of the value of top.
     public void SetTop(int top)
     {
         _top = top;
     }
-    // Get value of bottom.
+    // Returns value of bottom.
     public int GetBottom()
     {
         return _bottom;
     }
-    // Manipulate value of bottom.
+    // Allows the manipulation of the value of bottom.
     public void SetBottom(int bottom)
     {
         _bottom = bottom;
     }
-    // Create method that returns the form of fraction as a string, "(3 / 4)".
+    // Create a method that returns the form of fraction as a string, "(3 / 4)".
     public string GetFractionString()
     {
         string text = $"{_top} / {_bottom}";
         return text;
     }
 
-    // Create method that returns double of top and bottom as a decimal.
+    // Create a method that returns a double of numerator (top) and 
+    // and the denominator (bottom) as a decimal.
     public double GetDecimalValue()
     {
         return (double) _top / (double) _bottom;
