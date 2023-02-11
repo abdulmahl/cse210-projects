@@ -26,15 +26,17 @@ public class Word
 
         // Hide word method instanciated in my Program class
         //  referenced from my Scripture class.
-        public void HideWord()
+        public bool HideWord()
         {
             _hideText.Hide();
+            return true;
         }
 
         // Completely hide word method instanciated in my Program class
         //  referenced from my Scripture class.
-        public void CompletelyHidden()
+        public bool CompletelyHidden()
         {
             // _hideText.IsHidden();
+            return true;
         }
     }

@@ -31,13 +31,17 @@ class Program
             key = ReadLine();
             Clear();
 
-            word.HideWord();
-
             if (key == "quit")
             {
-                Clear();
                 return;
             }
+        
+            word.HideWord();
+        
+            // if (word.CompletelyHidden())
+            // {
+            //     return;
+            // }
         }
     }  
 }
