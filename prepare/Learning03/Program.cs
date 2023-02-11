@@ -8,8 +8,8 @@ class Program
     {
         Fraction fraction1 = new Fraction();
         // int fr1 = fraction1.GetTop() / fraction1.GetBottom();
-        // fraction1.SetTop(9);
-        // fraction1.SetBottom(3);
+        fraction1.SetTop(9);
+        fraction1.SetBottom(3);
         // int fr1 = fraction1.GetTop() / fraction1.GetBottom();
         WriteLine(fraction1.GetFractionString());
         WriteLine(fraction1.GetDecimalValue());
