@@ -25,6 +25,8 @@ public class Scripture
             _words = hiddenText.Split().ToList();
             Random random = new Random();
 
+            // The for loop contains the initializer, the conditition
+            // and the iterator.
             for (int i = 0; i < _words.Count; i++)
             {
                 int randomText = random.Next(_words.Count);
