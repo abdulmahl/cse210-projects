@@ -10,7 +10,7 @@ public class Entry
         private string _prompt;
         private string _response;
 
-        public void setDate(string date)
+        public void SetDate(string date)
         {
             _date = date;
         }
@@ -25,28 +25,28 @@ public class Entry
         //     return _time;
         // }
         
-        public string getDate()
+        public string GetDate()
         {
             
             return _date;
         }
 
-        public void setPrompt(string prompt)
+        public void SetPrompt(string prompt)
         {
             _prompt = prompt;
         }
 
-        public string getPrompt()
+        public string GetPrompt()
         {
             return _prompt;
         }
 
-        public void setResponse(string response)
+        public void SetResponse(string response)
         {
             _response = response;
         }
 
-        public string getResponse()
+        public string GetResponse()
         {
             
             return _response;

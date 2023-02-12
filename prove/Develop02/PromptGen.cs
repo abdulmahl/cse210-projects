@@ -8,7 +8,7 @@ using System.IO;
 //  Allows the Journal program to be loaded from the created text file. 
 public class PromptGenerator
     {
-    public static String getPrompt()
+    public static String GetPrompt()
         {
             string[] _prompt = new []
             {
@@ -34,10 +34,10 @@ public class PromptGenerator
                 for (int i = 0; i < entries.Count; i++)
                 {
                     Entry entry = entries[i];
-                    string line = $"Date: {entry.getDate()}";
+                    string line = $"Date: {entry.GetDate()}";
                     // string line1 = $"Time: {entry.getTime()}";
-                    string line2 = $"Prompt: {entry.getPrompt()}";
-                    string line3 = $"Entry: {entry.getResponse()}\n";
+                    string line2 = $"Prompt: {entry.GetPrompt()}";
+                    string line3 = $"Entry: {entry.GetResponse()}\n";
                     outputFile.WriteLine(line);
                     // outputFile.WriteLine(line1);
                     outputFile.WriteLine(line2);
@@ -59,10 +59,19 @@ public class PromptGenerator
                 string[] parts = line.Split(" ");
 
                 Entry entry = new Entry();
-                entry.setDate(parts[0]);
-                entry.setPrompt(parts[0]);
-                entry.setResponse(parts[0]);
-                newList.Add(entry);
+    
+                string line1 = entry.GetDate();
+                string line2 = entry.GetPrompt();
+                string line3 = entry.GetResponse();
+                // newList.Add(entry);
+
+
+                for (int i = 0; i < line.Length; i += 3)
+                {
+                    entry.SetDate(lines[0]);
+                    entry.SetPrompt(lines[1]);
+                    entry.SetResponse(lines[2]);
+                }
             }
 
         return newList;

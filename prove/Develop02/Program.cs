@@ -37,8 +37,7 @@ class Program
 
             else if (choice == "3")
             {
-                journal.setEntries(generator.loadFile());
-
+                generator.loadFile();
             }
 
             else if (choice == "4")

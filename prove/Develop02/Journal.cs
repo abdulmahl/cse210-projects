@@ -11,7 +11,7 @@ public class Journal
         private List<Entry> _entries = new List<Entry>();
         public void AddEntry()
         {
-            string _prompt = PromptGenerator.getPrompt();
+            string _prompt = PromptGenerator.GetPrompt();
             WriteLine(_prompt);
             Write("> ");
             string _response = ReadLine();
@@ -23,9 +23,9 @@ public class Journal
             // string _time = currentTime.ToShortTimeString();
 
             Entry entry = new Entry();
-            entry.setDate(_date);
-            entry.setPrompt(_prompt);
-            entry.setResponse(_response);
+            entry.SetDate(_date);
+            entry.SetPrompt(_prompt);
+            entry.SetResponse(_response);
             // entry.setTime(_time);
             _entries.Add(entry);
         }
@@ -40,8 +40,8 @@ public class Journal
             for (int i = 0; i < _entries.Count; i++)
             {
                 Entry entry = _entries[i];
-                WriteLine($"\nDate: {entry.getDate()} - Prompt: {entry.getPrompt()}");
-                WriteLine($"{entry.getResponse()}");
+                WriteLine($"\nDate: {entry.GetDate()} - Prompt: {entry.GetPrompt()}");
+                WriteLine($"{entry.GetResponse()}");
             }
         }
         
