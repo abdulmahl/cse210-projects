@@ -1,41 +1,24 @@
 using System;
 using static System.Console;
+using System.Diagnostics;
 
-namespace SuperBank
+
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            var account = new BankAccount("Kendra", 10000);
-            WriteLine($"\nAccount {account.number} was created for {account.owner} with ${account.balance}");
 
-            account.MakeWithdrawal(120, DateTime.Now, "Hammock");
-            WriteLine($"Withdrawn: {120}");
-            WriteLine($"Balance: ${account.balance}");
-            
-            account.MakeWithdrawal(50, DateTime.Now, "Xbox game");
-            WriteLine($"Withdrawn: {50}");
-            WriteLine($"Balance: ${account.balance}");
+        // ...
 
-            WriteLine(account.GetAccountHistory());
-            
+        // Stopwatch stopwatch = new Stopwatch();
+        // stopwatch.Start();
 
+        // // Your loop code goes here
 
-            // // Test that initial balance must be positive.
-            // try
-            // {
-            //     var invalidAccount = new BankAccount("invalid", -55);
-            // }
-            // catch (ArgumentOutOfRangeException e)
-            // {
-            //     WriteLine("Exception caught creating account with negative balance");
-            //     WriteLine(e.ToString());
-            // }
+        // stopwatch.Stop();
+        // WriteLine($"Loop took {stopwatch.ElapsedMilliseconds} ms to complete.");
 
-            
-
-            // account.MakeDeposit(-300, DateTime.Now, "Stealing");
-        }   
-    } 
-}
+        
+    }   
+} 
