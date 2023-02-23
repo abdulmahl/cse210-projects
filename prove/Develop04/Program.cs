@@ -5,11 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Breathing breathing = new Breathing("", "", "", "");
-        Spinner spinner = new Spinner();
-        // Reflecting reflecting = new Reflecting("", "", "");
-        Listing listing = new Listing("", "", "", "");
-
+        Clear();
         var choice = "";
         while (choice != "4")
         {
@@ -23,80 +19,25 @@ class Program
 
             if (choice == "1")
             {
-                breathing.SetName("Breathing Activity.");
-                breathing.SetDescription("This activity will help you ralax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.");
-                breathing.SetDuration("How long, in sceonds, would you like your session? ");
-
-                string actName = breathing.GetName();
-                string description = breathing.GetDescription();
-                string duration = breathing.GetDuration();
-
-                Clear();
-                WriteLine($"Welcome to the {actName}\n");
-                WriteLine($"{description}\n");
-                Write(duration);
-                Read();
-                Clear();
-                Write("Get ready...");
-
-                spinner.Start();
-                Thread.Sleep(5000); 
-                spinner.Stop();
+                var _breathing = new Breathing();
+                _breathing.ShowBreathingActivity();
             }
 
             else if (choice == "2")
             {
-                breathing.SetName("Reflecting Activity.");
-                breathing.SetDescription("This activity will help you reflect on times in your life when you have demonstrated strength and resilience. This will help you recognize the power you have and how you can use in other aspects of your life.");
-                breathing.SetDuration("How long, in sceonds, would you like your session? ");
-
-                string actName = breathing.GetName();
-                string description = breathing.GetDescription();
-                string duration = breathing.GetDuration();
-
-                Clear();
-                WriteLine($"Welcome to the {actName}\n");
-                WriteLine($"{description}\n");
-                Write(duration);
-                Read();
-                Clear();
-                Write("Get ready...");
-
-                spinner.Start();
-                Thread.Sleep(5000); 
-                spinner.Stop();
+                var _reflecting = new Reflecting();
+                _reflecting.ShowReflectingActivity();
             }
 
             else if (choice == "3")
             {
-                breathing.SetName("Listing Activity.");
-                breathing.SetDescription("This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
-                breathing.SetDuration("How long, in sceonds, would you like your session? ");
-
-                string actName = breathing.GetName();
-                string description = breathing.GetDescription();
-                string duration = breathing.GetDuration();
-
-                Clear();
-                WriteLine($"Welcome to the {actName}\n");
-                WriteLine($"{description}\n");
-                Write(duration);
-                Read();
-                Clear();
-                WriteLine("Get ready...");
-
-                spinner.Start( );
-                Thread.Sleep(2000); 
-                spinner.Stop();
-
-                WriteLine("List as many responses as you can to the following prompt:");
-                listing.GetPrompt();
-                ReadLine();
-
+                var _listing = new Listing();
+              _listing.ShowListingActivity();
             }
 
             else
             {
+                Clear();
                 break;
             }
         }   

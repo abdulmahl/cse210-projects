@@ -4,53 +4,65 @@ public class Activity
 {
     private string _activityName;
     private string _description;
-    private string _durationSeconds;
-    private string _endMessage;
+    private string _duration;
+    private string _message1;
+    private string _message2;
 
-    public Activity(string actName, string description, string duration, string endMsg)
+    public Activity()
     {
-        _activityName = actName;
-        _description = description;
-        _durationSeconds = duration;
-        _endMessage = endMsg;
+        _activityName = "";
+        _description = "";
+        _duration = "";
+        _message1 = "";
+        _message2 = "";
     }
 
     public string GetName()
     {
-        return _activityName;
+        return this._activityName;
     }
 
     public void SetName(string actName)
     {
-        _activityName = actName;
+        this._activityName = actName;
     }
 
     public string GetDescription()
     {
-        return _description;
+        return this._description;
     }
 
     public void SetDescription(string description)
     {
-        _description = description;
+        this._description = description;
     }
     public string GetDuration()
     {
-        return _durationSeconds;
+        return this._duration;
     }
 
-    public void SetDuration(string seconds)
+    public void SetDuration(string duration)
     {
-        _durationSeconds = seconds;
+        this._duration = duration;
     }
 
-    public string GetMessage()
+    public string GetMessage1()
     {
-        return _endMessage;
+        return this._message1;
     }
 
-    public void SetMessage(string endMsg)
+    public void SetMessage1(string startMsg)
     {
-        _endMessage = endMsg;
+        this._message1 = startMsg;
+    }
+
+    public string GetMessage2()
+    {
+        return this._message2;
+    }
+
+    public void SetMessage2(string startMsg)
+    {
+        this._message2 = startMsg;
     }
 }

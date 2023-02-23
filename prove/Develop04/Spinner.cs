@@ -1,36 +1,31 @@
 using System;
+using static System.Console;
 
 public class Spinner
 {
-    private int _currentFrame = 0;
-    private char[] _frames = {'|', '/', '-', '\\'};
-    private bool _active = false;
-
     public Spinner() 
     {
 
     }
 
-    public void Start()
+    public void GetSpin()
     {
-        _active = true;
-        Thread spinnerThread = new Thread(Spin);
-        spinnerThread.Start();
-    }
-
-    public void Stop()
-    {
-        _active = false;
-    }
-
-    private void Spin()
-    {
-        while (_active)
+        int spin = 0;
+        while (spin != 3)
         {
-            Console.Write(_frames[_currentFrame]);
-            _currentFrame = (_currentFrame + 1) % _frames.Length;
-            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-            Thread.Sleep(500);
+            Write("|");
+            Thread.Sleep(250);
+            Write("\b \b");
+            Write("/");
+            Thread.Sleep(250);
+            Write("\b \b");
+            Write("-");
+            Thread.Sleep(250);
+            Write("\b \b");
+            Write(@"\");
+            Thread.Sleep(250);
+            Write("\b \b");
+            spin += 1;
         }
     }
 }
