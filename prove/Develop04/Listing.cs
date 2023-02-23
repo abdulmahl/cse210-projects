@@ -3,10 +3,10 @@ using static System.Console;
 
 public class Listing : Activity
 {
-    // CountDown countSeconds = new CountDown();
-    private static System.Timers.Timer aTimer;
+    private Spinner _spinner = new Spinner();
+    private CountDown _counter = new CountDown(5);
 
-    // private string _prompt;
+
     private string [] _prompts = new string[]
     {
         "Who are people that you appreciate?",
@@ -16,28 +16,54 @@ public class Listing : Activity
         "Who are some of your personal heroes?"
     };
 
-    public Listing(string actName, string description, string duration, string endMsg) 
-    : base(actName, description, duration, endMsg)
+    public Listing() 
+    : base()
     {
-        // _prompt = prompt;
+        base.SetName("Listing Activity");
+        base.SetDescription("This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
+        base.SetDuration("How long, in sceonds, would you like for your session? ");
+        base.SetMessage1("\nWell done!!");
     }
 
-    public void GetPrompt()
+    public void GetListingPrompt()
     {
         // var countInput = 0;
         Random random = new Random();
         int index = random.Next(_prompts.Length);
         string randPrompt = _prompts[index];
 
-        WriteLine($"\n---{randPrompt}---");
-        WriteLine($"You may begin in: ");
+        WriteLine($"  ---{randPrompt}---");
+        Write($"You may begin in: ");
+        _counter.GetCounter();
+        WriteLine("");
         string input = ReadLine();
 
-        aTimer = new System.Timers.Timer(30000);
         while (true)
         {
             Write("> ");
             ReadLine();
         }
+    }
+
+    public void ShowListingActivity()
+    {
+        string actName = base.GetName();
+        string description = base.GetDescription();
+        string duration = base.GetDuration();
+
+        Clear();
+        WriteLine($"Welcome to the {actName}\n");
+        WriteLine($"{description}\n");
+        Write($"{duration}");
+        Read();
+        Clear();
+        WriteLine("Get ready...");
+
+        _spinner.GetSpin();
+        Write(" ");
+
+        WriteLine("\nList as many responses as you can to the following prompt:");
+        this.GetListingPrompt();
+        ReadLine();
     }
 }
