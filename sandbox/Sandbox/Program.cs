@@ -1,39 +1,21 @@
-// using System;
-// using static System.Console;
-// using System.Diagnostics;
-
-
-
-// class Program
-// {
-//     static void Main(string[] args)
-//     {
-//         int count = 4;
-//         while (count > -0)
-//         {
-//             Write("Look...");
-//             Write(count + "\r");
-//             count--;
-//             Thread.Sleep(300);
-//         }
-//         ReadLine();
-
-
-//         // WriteLine("Blu\re");
-//     }   
-// } 
-
 using System;
-using System.Threading;
+using static System.Console;
+using System.Diagnostics;
 
-class CountdownTimer {
-    static void Main() {
-        int seconds = 9; // set the number of seconds to count down
-        while (seconds > 0) 
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string text = "Lorem ipsum dolor...";
+
+        for (int i = 1; i <= text.Length; i++)
         {
-            Console.Write(seconds + "\r");
-            seconds--;
-            Thread.Sleep(500); // sleep for one second
+            Console.Write(text.Substring(0, i));
+            Thread.Sleep((int)(1000 * Math.Pow(1.1, -i)));
         }
+
+        Console.ReadLine();
     }
 }
