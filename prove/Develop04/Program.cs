@@ -38,7 +38,7 @@ class Program
             else
             {
                 Clear();
-                break;
+                return;
             }
         }   
     }

@@ -8,22 +8,22 @@ public class Spinner
 
     }
 
-    public void GetSpin()
+    public void GetSpinner()
     {
         int spin = 0;
         while (spin != 3)
         {
             Write("|");
-            Thread.Sleep(250);
+            Thread.Sleep(500);
             Write("\b \b");
             Write("/");
-            Thread.Sleep(250);
+            Thread.Sleep(500);
             Write("\b \b");
             Write("-");
-            Thread.Sleep(250);
+            Thread.Sleep(500);
             Write("\b \b");
-            Write(@"\");
-            Thread.Sleep(250);
+            Write("\\");
+            Thread.Sleep(500);
             Write("\b \b");
             spin += 1;
         }

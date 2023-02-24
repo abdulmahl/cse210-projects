@@ -17,7 +17,7 @@ public class CountDown
         {
             Write(_seconds);
             _seconds--;
-            Thread.Sleep(500);
+            Thread.Sleep(1000);
             Write("\b \b");
         }
     }

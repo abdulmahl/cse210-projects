@@ -3,8 +3,6 @@ using static System.Console;
 
 public class Breathing : Activity
 {
-    // private Spinner _spinner;
-
     private string _breathIn;
     private string _breathOut;
 
@@ -17,17 +15,23 @@ public class Breathing : Activity
         base.SetName("Breathing Activity");
         base.SetDescription("This activity will help you ralax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.");
         base.SetDuration("How long, in sceonds, would you like for your session? ");
-        base.SetMessage1("\nWell done!!");
+        base.SetMessage1("Well done!!");
     }
 
-    public string GetBreathIn()
+    public void GetBreathIn()
     {
-        return this._breathIn;
+        Write(_breathIn);
+        var countIn = new CountDown(4);
+        countIn.GetCounter();
+        WriteLine("");
     }
 
-    public string GetBreathOut()
+    public void GetBreathOut()
     {
-        return $"{this._breathOut}";
+        Write(_breathOut);
+        var countOut = new CountDown(6);
+        countOut.GetCounter();
+        WriteLine("");
     } 
 
     public void ShowBreathingActivity()
@@ -36,9 +40,7 @@ public class Breathing : Activity
         string description = base.GetDescription();
         string duration = base.GetDuration();
         string msg1 = base.GetMessage1();
-        string breathIn = this.GetBreathIn();
-        string breathOut = this.GetBreathOut();
-
+    
         Clear();
         WriteLine($"Welcome to the {actName}\n");
         WriteLine($"{description}\n");
@@ -48,64 +50,31 @@ public class Breathing : Activity
         WriteLine("Get ready...");
 
         var _spinner = new Spinner();
-        _spinner.GetSpin();
+        _spinner.GetSpinner();
 
         Write(" ");
         WriteLine("");
 
-        Write($"{breathIn}");
-        var countIn = new CountDown(4);
-        countIn.GetCounter();
-        WriteLine("");
+        this.GetBreathIn();
+        this.GetBreathOut();
+        WriteLine();
 
-        Write(breathOut);
-        var countOut = new CountDown(6);
-        countOut.GetCounter();
-        WriteLine("");
+        this.GetBreathIn();
+        this.GetBreathOut();
+        WriteLine();
 
-WriteLine("");
-        Write($"{breathIn}");
-        var countIn1 = new CountDown(4);
-        countIn1.GetCounter();
-        WriteLine("");
-
-        Write(breathOut);
-        var countOut1 = new CountDown(6);
-        countOut1.GetCounter();
-        WriteLine("");
-
-WriteLine("");
-        Write($"{breathIn}");
-        var countIn2 = new CountDown(4);
-        countIn2.GetCounter();
-        WriteLine("");
-
-        Write(breathOut);
-        var countOut2 = new CountDown(6);
-        countOut2.GetCounter();
-        WriteLine("");
-
-WriteLine("");
-        Write($"{breathIn}");
-        var countIn3 = new CountDown(4);
-        countIn3.GetCounter();
-        WriteLine("");
-
-        Write(breathOut);
-        var countOut3 = new CountDown(6);
-        countOut3.GetCounter();
+        this.GetBreathIn();
+        this.GetBreathOut();
 
         WriteLine($"\n{msg1}");
 
-        _spinner.GetSpin();
-
+        _spinner.GetSpinner();
         Write(" ");
         
         base.SetMessage2($"\nYou have completed another {seconds} seconds of the {base.GetName()}");
         string msg2 = base.GetMessage2();
         WriteLine($"{msg2}");
-
-        _spinner.GetSpin();
+        _spinner.GetSpinner();
         Clear();
     }
 }

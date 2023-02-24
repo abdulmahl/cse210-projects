@@ -39,8 +39,8 @@ public class Reflecting : Activity
     public void GetReflectingPrompt()
     {
         Random randomPrompt = new Random();
-        int i = randomPrompt.Next(_reflectingPrompts.Length);
-        string prompt = _reflectingPrompts[i];
+        int i = randomPrompt.Next(this._reflectingPrompts.Length);
+        string prompt = this._reflectingPrompts[i];
         WriteLine("\nConsider the following prompt:");
         WriteLine($"\n--- {prompt} ---\n");
 
@@ -51,25 +51,27 @@ public class Reflecting : Activity
     {
         WriteLine("\nNow ponder on each of the following questions as they are related to this experience.");
         Write("You may begin in: ");
-        _countDown.GetCounter();
+        this._countDown.GetCounter();
     }
 
     public void GetQuestions()
     {
         Random randomQuestion = new Random();
-        int i = randomQuestion.Next(_questions.Length);
-        int j = randomQuestion.Next(_questions.Length);
+        int i = randomQuestion.Next(this._questions.Length);
+        int j = randomQuestion.Next(this._questions.Length);
 
         string question = _questions[i];
         string question1 = _questions[j];
 
         Write($"> {question} ");
-        _spinner.GetSpin();
+        var _spinner1 = new Spinner();
+        _spinner1.GetSpinner();
         Write(" ");
 
         WriteLine();
         Write($"> {question1} ");
-        _spinner.GetSpin();
+        var _spinner2 = new Spinner();
+        _spinner2.GetSpinner();
         Write(" ");
     }
 
@@ -88,7 +90,7 @@ public class Reflecting : Activity
         Clear();
         WriteLine("Get ready...");
 
-        _spinner.GetSpin();
+        this._spinner.GetSpinner();
         Write(" ");
 
         this.GetReflectingPrompt();
@@ -100,14 +102,13 @@ public class Reflecting : Activity
         this.GetQuestions();
         WriteLine($"\n{msg1}");
 
-        _spinner.GetSpin();
+        this._spinner.GetSpinner();
         Write(" ");
 
         base.SetMessage2($"\nYou have completed another {seconds} seconds of the {base.GetName()}");
         string msg2 = base.GetMessage2();
         WriteLine($"{msg2}");
-
-        _spinner.GetSpin();
+        this._spinner.GetSpinner();
         Clear();
     }
 }

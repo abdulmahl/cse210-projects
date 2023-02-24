@@ -4,9 +4,6 @@ using static System.Console;
 public class Listing : Activity
 {
     private Spinner _spinner = new Spinner();
-    private CountDown _counter = new CountDown(5);
-
-
     private string [] _prompts = new string[]
     {
         "Who are people that you appreciate?",
@@ -27,43 +24,59 @@ public class Listing : Activity
 
     public void GetListingPrompt()
     {
-        // var countInput = 0;
         Random random = new Random();
         int index = random.Next(_prompts.Length);
         string randPrompt = _prompts[index];
 
         WriteLine($"  ---{randPrompt}---");
         Write($"You may begin in: ");
+        var _counter = new CountDown(5);
         _counter.GetCounter();
         WriteLine("");
-        string input = ReadLine();
-
-        while (true)
-        {
-            Write("> ");
-            ReadLine();
-        }
     }
 
     public void ShowListingActivity()
     {
+
         string actName = base.GetName();
         string description = base.GetDescription();
         string duration = base.GetDuration();
+        string msg1 = base.GetMessage1();
 
         Clear();
         WriteLine($"Welcome to the {actName}\n");
         WriteLine($"{description}\n");
         Write($"{duration}");
-        Read();
+        int seconds = int.Parse(ReadLine());
+        // Read();
         Clear();
         WriteLine("Get ready...");
 
-        _spinner.GetSpin();
+        this._spinner.GetSpinner();
         Write(" ");
 
         WriteLine("\nList as many responses as you can to the following prompt:");
         this.GetListingPrompt();
-        ReadLine();
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(seconds);
+
+        var countInput = 0;
+        while (DateTime.Now < endTime)
+        {
+            Write("> ");
+            ReadLine();
+            countInput += 1;
+        }
+        WriteLine($"\nYou have listed {countInput} items.");
+
+        WriteLine($"{msg1}");
+        this._spinner.GetSpinner();
+
+        base.SetMessage2($"\nYou have completed another {seconds} seconds of the {base.GetName()}");
+        string msg2 = base.GetMessage2();
+        WriteLine($"{msg2}");
+        this._spinner.GetSpinner();
+        Clear();
     }
 }
