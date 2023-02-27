@@ -1,5 +1,3 @@
-using System;
-
 public class Rectangle : Shape
 {
     private double _length;

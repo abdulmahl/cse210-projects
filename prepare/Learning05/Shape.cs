@@ -1,5 +1,3 @@
-using System;
-
 public abstract class Shape
 {
     private string _name;

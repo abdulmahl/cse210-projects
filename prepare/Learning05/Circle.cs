@@ -1,5 +1,3 @@
-using System;
-
 public class Circle : Shape
 {
     private int _radius;
