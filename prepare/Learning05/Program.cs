@@ -5,11 +5,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Square square = new Square("square", "red", 7);
+        Square square = new Square("square", "red", 3);
 
-        Circle circle = new Circle("circle", "blue", 13);
+        Circle circle = new Circle("circle", "blue", 6);
         
-        Rectangle rectangle = new Rectangle("rectangle", "green", 7, 11);
+        Rectangle rectangle = new Rectangle("rectangle", "green", 4, 5);
         
         // GetShapeInformation(square);
         // GetShapeInformation(circle);
