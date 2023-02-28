@@ -10,6 +10,8 @@ class Program
         Circle circle = new Circle("circle", "blue", 6);
         
         Rectangle rectangle = new Rectangle("rectangle", "green", 4, 5);
+
+        Triangle triangle = new Triangle("triangle", "yellow", 3, 9, .5);
         
         // GetShapeInformation(square);
         // GetShapeInformation(circle);
@@ -19,12 +21,10 @@ class Program
         shapes.Add(square);
         shapes.Add(circle);
         shapes.Add(rectangle);
+        shapes.Add(triangle);
 
         foreach (Shape shape in shapes)
         {
-            shape.GetNameAndColor();
-            shape.GetArea();
-
             WriteLine($"The {shape.GetNameAndColor()},");
             WriteLine($"with the area of {shape.GetArea()}\n");
         }
