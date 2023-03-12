@@ -86,7 +86,7 @@ class Program
                 break;
 
                 case "5": // Record Event.
-                    int j = 1;
+                    int j = 0;
                     WriteLine("\nThe Goals are:");
                     foreach (Goal goal in goals)
                     {
