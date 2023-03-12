@@ -35,28 +35,27 @@ public class SaveLoad
         {
             line = sr.ReadLine();
             _points = int.Parse(line);
-            line = sr.ReadLine();
 
             while ((line = sr.ReadLine()) != null)
             {
-                string[] goalParts = line.Split(",");
+                string[] goalParts = line.Split(',');
                 string typeGoal = goalParts[0];
 
                 if (typeGoal == "Simple Goal:")
                 {
-                    var goal = new SimpleGoal(goalParts[1], goalParts[2], int.Parse(goalParts[3]), bool.Parse(goalParts[4]));
+                    var goal = new SimpleGoal(goalParts[1], goalParts[2]);
                     _goals.Add(goal);
                 }
 
                 else if (typeGoal == "Eternal Goal:")
                 {
-                    var goal = new EternalGoal(goalParts[1], goalParts[2], int.Parse(goalParts[3]), bool.Parse(goalParts[4]));
+                    var goal = new EternalGoal(goalParts[1], goalParts[2]);
                     _goals.Add(goal);
                 }
 
                 else if (typeGoal == "Checklist Goal:")
                 {
-                    var goal = new ChecklistGoal(goalParts[1], goalParts[2], int.Parse(goalParts[3]), bool.Parse(goalParts[4]), int.Parse(goalParts[5]), int.Parse(goalParts[6]), int.Parse(goalParts[7]));
+                    var goal = new ChecklistGoal(goalParts[1], goalParts[2], int.Parse(goalParts[5]), int.Parse(goalParts[6]));
                     _goals.Add(goal);
                 }
                 line = sr.ReadLine();

@@ -9,8 +9,8 @@ public class EternalGoal : Goal
         base._completed = false;
     }
     
-    public EternalGoal(string goalName, string description, int points, bool completed)
-    : base(goalName, description, points)
+    public EternalGoal(string goalName, string description)
+    : base(goalName, description)
     {
     }
     public override void RecordEvent()

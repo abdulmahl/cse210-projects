@@ -24,7 +24,7 @@ public abstract class Goal
     {
     }
 
-    public Goal(string goalName, string description, int points, bool completed)
+    public Goal(string goalName, string description)
     {
     }
     public int GetPoints()

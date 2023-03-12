@@ -16,8 +16,8 @@ public class ChecklistGoal : Goal
         _bonus = int.Parse(ReadLine());
     }
 
-    public ChecklistGoal(string goalName, string description, int points, bool copleted, int target, int times, int bonus)
-    : base(goalName, description, points)
+    public ChecklistGoal(string goalName, string description, int target, int times)
+    : base(goalName, description)
     {
 
     }

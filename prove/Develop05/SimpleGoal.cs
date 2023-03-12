@@ -8,8 +8,8 @@ public class SimpleGoal : Goal
     {
     }
 
-    public SimpleGoal(string goalName, string description, int points, bool complete)
-    : base(goalName, description, points, complete)
+    public SimpleGoal(string goalName, string description)
+    : base(goalName, description)
     {
 
     }
