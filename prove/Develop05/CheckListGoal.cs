@@ -3,8 +3,6 @@ using System.IO;
 
 public class ChecklistGoal : Goal
 {
-    private int _times = 0;
-    private int _bonus = 0;
     private int _target = 0;
     
     public ChecklistGoal() 
@@ -14,8 +12,6 @@ public class ChecklistGoal : Goal
         _target = int.Parse(ReadLine());
         Write("What is the bonus for accomplishing that many times? ");
         _bonus = int.Parse(ReadLine());
-
-        _completed = false;
     }
 
     public ChecklistGoal(string goalName, string description, int target, int times)
@@ -36,13 +32,11 @@ public class ChecklistGoal : Goal
     {
         this._times++;
         if (this._times == this._target)
-        this._bonus += this._points;
         base._completed = true;
     }
 
     public override string SaveGoal() // Writes Goals to a text file.
     {
-        var goal = $"Checklist Goal:{base._goalName},{base._description},{base._points},{this._bonus},{this._times},{this._target}";
-        return goal;
+        return $"Checklist Goal:{base._goalName},{base._description},{base._points},{this._bonus},{this._times},{this._target}";
     }
 }

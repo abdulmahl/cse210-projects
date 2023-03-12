@@ -29,7 +29,6 @@ public class SimpleGoal : Goal
 
     public override string SaveGoal() // Writes Goals to a text file.
     {
-        var goal = $"Simple Goal:{base._goalName},{base._description},{base._points},{base.IsComplete()}";
-        return goal;
+        return $"Simple Goal:{base._goalName},{base._description},{base._points},{base.IsComplete()}";
     }
 }

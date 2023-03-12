@@ -38,7 +38,7 @@ public class SaveLoad
 
             while ((line = sr.ReadLine()) != null)
             {
-                string[] goalParts = line.Split(',');
+                string[] goalParts = line.Split(",");
                 string typeGoal = goalParts[0];
 
                 if (typeGoal == "Simple Goal:")

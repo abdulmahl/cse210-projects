@@ -19,7 +19,6 @@ public class EternalGoal : Goal
 
     public override string SaveGoal() // Writes Goals to a text file.
     {
-        var goal = $"Eternal Goal:{base._goalName},{base._description},{base._points}";
-        return goal;
+        return $"Eternal Goal:{base._goalName},{base._description},{base._points}";
     }
 }
