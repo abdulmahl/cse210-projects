@@ -55,7 +55,7 @@ public class SaveLoad
 
                 else if (typeGoal == "Checklist Goal:")
                 {
-                    var goal = new ChecklistGoal(goalParts[1], goalParts[2], int.Parse(goalParts[5]), int.Parse(goalParts[6]));
+                    var goal = new ChecklistGoal(goalParts[1], goalParts[2], int.Parse(goalParts[3]), int.Parse(goalParts[4]));
                     _goals.Add(goal);
                 }
                 line = sr.ReadLine();
