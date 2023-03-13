@@ -10,6 +10,8 @@ public class Vehicle
     protected int _year = 0;
     protected string _engineSize = "";
     protected string _transmission = "";
+    protected DateTime _date;
+
 
     public Vehicle(string type, string make, string model, string viNumber, int year, string engineSize, string transmission)
     {
@@ -20,6 +22,11 @@ public class Vehicle
         this._year = year;
         this._engineSize = engineSize;
         this._transmission = transmission;
+    }
+
+    public Vehicle(DateTime date)
+    {
+        this._date = date;
     }
 
     public Vehicle()
@@ -45,7 +52,7 @@ public class Vehicle
 
     public void SetMake()
     {
-        Write($"What is the make of this {_type}? ");
+        Write($"What is the make of this {this._type}? ");
         _make = ReadLine();
     }
 
@@ -56,8 +63,19 @@ public class Vehicle
 
     public void SetModel()
     {
-        Write($"What model is this {_make}? ");
+        Write($"What model is this {this._make}? ");
         _model = ReadLine();
+    }
+
+    public DateTime GetDateTime()
+    {
+        return this._date;
+    }
+
+    public void SetDateTime()
+    {
+        Write($"On which day would you like to test-drive this {this._model}? ");
+        _date = DateTime.Parse(ReadLine());
     }
 
     public virtual string GetVINumber()

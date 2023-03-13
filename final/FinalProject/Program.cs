@@ -3,6 +3,7 @@ using static System.Console;
 
 class Program
 {
+    List<Vehicle> vehicles = new List<Vehicle>();
     static void Main(string[] args)
     {
         int option = 0;
@@ -11,9 +12,10 @@ class Program
             WriteLine($"    Online Test Drive Boooking");
             WriteLine($"Select one of the following menu options");
             WriteLine("  1. Enter Vehicle Details");
-            WriteLine("  2. List Entered Vehicles");
-            WriteLine("  3. Save Listed Vehicles");
-            WriteLine("  4. Exit");
+            WriteLine("  2. Get Vehicle Description");
+            WriteLine("  3. List Entered Vehicles");
+            WriteLine("  4. Save Listed Vehicles");
+            WriteLine("  5. Exit");
             Write("What would you like to do? ");
             option = int.Parse(ReadLine());
 
@@ -22,21 +24,26 @@ class Program
             switch (option)
                 {
                     case 1:
-                        var vehicle = new Vehicle();
-                            vehicle.SetBodyType();
-                            vehicle.SetMake();
-                            vehicle.SetModel();
+                    var sedan = new Vehicle();
+                        sedan.SetBodyType();
+                        sedan.SetMake();
+                        sedan.SetModel();
+                        sedan.SetDateTime();
                     break;
 
                     case 2:
+                  
                     break;
 
                     case 3:
+                    break;
+
+                    case 4:
                     break;
                     
                     default:
                     break;
                 }            
-        } while (option != 4);
+        } while (option != 5);
     }
 }

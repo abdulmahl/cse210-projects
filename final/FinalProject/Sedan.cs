@@ -11,21 +11,25 @@ public class Sedan : Vehicle
 
     public override string GetVINumber() // Lexus IS350
     {
-        return "JT8BE262665000481";
+        base._viNumber = "JT8BE262665000481";
+        return base._viNumber;
     }
 
     public override int GetYear()
     {
-        return 2006;
+        base._year = 2006;
+        return base._year;
     }
 
     public override string GetEngineSize()
     {
-        return "1.8 Litre";
+       base. _engineSize = "1.8 Litre";
+        return base._engineSize;
     }
 
     public override string GetTransmission()
     {
-        return "6 Speed Manual";
+        base._transmission = "6 Speed Manual";
+        return base._transmission;
     }
 }
