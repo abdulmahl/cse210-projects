@@ -56,7 +56,7 @@ public class Vehicle
 
     public void SetModel()
     {
-        Write($"What model of the {_make}? ");
+        Write($"What model is this {_make}? ");
         _model = ReadLine();
     }
 
