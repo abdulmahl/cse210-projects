@@ -78,8 +78,9 @@ public class Vehicle
         Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
         _date = DateTime.Parse(ReadLine());
         WriteLine("Your selection has been recorded");
-        Write("Press enter to go back to the main menu... ");
+        Write("Press return to go back to the main menu... ");
         ReadLine();
+        Clear();
     }
 
     public virtual void GetVehicleSpecs(int number)
