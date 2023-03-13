@@ -22,19 +22,9 @@ public class CardHolder
         return this._firstName;
     }
 
-    public void SetFirstName(string firstName)
-    {
-        this._firstName = firstName;
-    }
-
     public string GetLastName()
     {
         return this._lastName;
-    }
-
-    public void SetLastName(string lastName)
-    {
-        this._lastName = lastName;
     }
 
     public int GetCardNumber()
@@ -42,19 +32,9 @@ public class CardHolder
         return this._cardNumber;
     }
 
-    public void SetCardNumber(int cardNumber)
-    {
-        this._cardNumber = cardNumber;
-    }
-
     public int GetPIN()
     {
         return this._PIN;
-    }
-
-    public void SetPIN(int PIN)
-    {
-        this._PIN = PIN;
     }
 
     public double GetBalance()
