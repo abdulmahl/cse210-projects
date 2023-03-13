@@ -3,13 +3,13 @@ using static System.Console;
 
 public class Vehicle
 {
-    private string _type = "";
-    private string _make = "";
-    private string _model = "";
-    private string _viNumber = "";
-    private int _year = 0;
-    private string _engineSize = "";
-    private string _transmission = "";
+    protected string _type = "";
+    protected string _make = "";
+    protected string _model = "";
+    protected string _viNumber = "";
+    protected int _year = 0;
+    protected string _engineSize = "";
+    protected string _transmission = "";
 
     public Vehicle(string type, string make, string model, string viNumber, int year, string engineSize, string transmission)
     {
