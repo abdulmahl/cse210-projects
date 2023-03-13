@@ -6,22 +6,22 @@ public class Crossover : Vehicle
 
     }
 
-    public override string GetVINumber() // Subaru Outback
+    public string GetVINumber() // Subaru Outback
     {
         return "4S4BSBDC5F3315222";
     }
 
-    public override int GetYear()
+    public int GetYear()
     {
         return 2015;
     }
 
-    public override string GetEngineSize()
+    public string GetEngineSize()
     {
         return "2.0 Litre";
     }
 
-    public override string GetTransmission()
+    public string GetTransmission()
     {
         return "6 Speed Manual";
     }

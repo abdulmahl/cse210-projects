@@ -11,6 +11,7 @@ public class Vehicle
     protected string _engineSize = "";
     protected string _transmission = "";
     protected DateTime _date;
+    protected bool _tested = false;
 
 
     public Vehicle(string type, string make, string model, string viNumber, int year, string engineSize, string transmission)
@@ -74,27 +75,27 @@ public class Vehicle
 
     public void SetDateTime()
     {
-        Write($"On which day would you like to test-drive this {this._model}? ");
+        Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
         _date = DateTime.Parse(ReadLine());
+        WriteLine("Your selection has been recorded");
+        Write("Press enter to go back to the main menu... ");
+        ReadLine();
     }
 
-    public virtual string GetVINumber()
+    public virtual void GetVehicleSpecs(int number)
     {
-        return this._viNumber;
+        string specs =  $"{this._make} {this._model}, {this._type} Vin Number: {this._viNumber} Engine Size: {this._engineSize} Transmission: {this._transmission}";
+        WriteLine($"{number}. {specs} {this._year}");
     }
 
-    public virtual int GetYear()
+    public virtual void GetSpecs(int number)
     {
-        return this._year;
+        string specs = $"{this._make} {this._model} {this._year}";
+        WriteLine($"{number}. {specs}");
     }
 
-    public virtual string GetEngineSize()
+    public virtual string SaveToFile()
     {
-        return this._engineSize;
-    }
-
-    public virtual string GetTransmission()
-    {
-        return this._transmission;
+        return $"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission},{this._tested}";
     }
 }

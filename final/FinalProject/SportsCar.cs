@@ -6,22 +6,22 @@ public class SportsCar : Vehicle
 
     }
 
-    public override string GetVINumber()
+    public string GetVINumber()
     {
         return "WBAAV33451EE76139";
     }
 
-    public override int GetYear() // BMW 3 Series 
+    public int GetYear() // BMW 3 Series 
     {
         return 2022;
     }
 
-    public override string GetEngineSize()
+    public string GetEngineSize()
     {
         return "3.3 Litre";
     }
 
-    public override string GetTransmission()
+    public string GetTransmission()
     {
         return "6 Speed DCT";
     }

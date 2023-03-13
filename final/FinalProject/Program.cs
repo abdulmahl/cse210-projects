@@ -9,7 +9,7 @@ class Program
         int option = 0;
         do
         {
-            WriteLine($"    Online Test Drive Boooking");
+            WriteLine($"Online Test Drive Boooking");
             WriteLine($"Select one of the following menu options");
             WriteLine("  1. Enter Vehicle Details");
             WriteLine("  2. Get Vehicle Description");

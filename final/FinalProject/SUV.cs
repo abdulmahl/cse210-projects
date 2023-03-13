@@ -6,22 +6,22 @@ public class SUV : Vehicle
 
     }
 
-    public override string GetVINumber() // Land Rover Discovery
+    public string GetVINumber() // Land Rover Discovery
     {
         return "SALVA2AG0DH710610";
     }
 
-    public override int GetYear()
+    public int GetYear()
     {
         return 2013;
     }
 
-    public override string GetEngineSize()
+    public string GetEngineSize()
     {
         return "2.5 Litre";
     }
 
-    public override string GetTransmission()
+    public string GetTransmission()
     {
         return "6 Speed AMT";
     }

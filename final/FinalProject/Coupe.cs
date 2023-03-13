@@ -6,22 +6,22 @@ public class Coupe : Vehicle
 
     }
 
-    public override string GetVINumber() // Aston Martin Vanquish
+    public string GetVINumber() // Aston Martin Vanquish
     {
         return "SCFPDCGP4EGK01312";
     }
 
-    public override int GetYear()
+    public int GetYear()
     {
         return 2014;
     }
 
-    public override string GetEngineSize()
+    public string GetEngineSize()
     {
         return "3.0 Litre";
     }
 
-    public override string GetTransmission()
+    public string GetTransmission()
     {
         return "6 Speed CVT";
     }

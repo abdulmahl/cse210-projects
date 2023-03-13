@@ -6,22 +6,22 @@ public class Hatchback : Vehicle
 
     }
 
-    public override string GetVINumber()  // Volvo V60
+    public string GetVINumber()  // Volvo V60
     {
         return "YV140MEB0F1195985";
     }
 
-    public override int GetYear()
+    public int GetYear()
     {
         return 2015;
     }
 
-    public override string GetEngineSize()
+    public string GetEngineSize()
     {
         return "1.8 Litre";
     }
 
-    public override string GetTransmission()
+    public string GetTransmission()
     {
         return "5 Speed AT";
     }

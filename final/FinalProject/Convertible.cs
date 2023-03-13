@@ -6,22 +6,22 @@ public class Convertible : Vehicle
 
     }
 
-    public override string GetVINumber() // Mercedes-Benz SLK 
+    public string GetVINumber() // Mercedes-Benz SLK 
     {
         return "WDBKK65F61F198941";
     }
 
-    public override int GetYear()
+    public int GetYear()
     {
         return 2001;
     }
 
-    public override string GetEngineSize()
+    public string GetEngineSize()
     {
         return "2.8 Litre";
     }
 
-    public override string GetTransmission()
+    public string GetTransmission()
     {
         return "6 Speed IMT";
     }

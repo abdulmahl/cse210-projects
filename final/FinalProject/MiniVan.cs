@@ -6,22 +6,22 @@ public class MiniVan : Vehicle
 
     }
 
-    public override string GetVINumber()  // Chrysler Town and Country
+    public string GetVINumber()  // Chrysler Town and Country
     {
         return "2C4PC1AG5DR790348";
     }
 
-    public override int GetYear()
+    public int GetYear()
     {
         return 2013;
     }
 
-    public override string GetEngineSize()
+    public string GetEngineSize()
     {
         return "1.4 Litre";
     }
 
-    public override string GetTransmission()
+    public string GetTransmission()
     {
         return "5 Speed Manual";
     }
