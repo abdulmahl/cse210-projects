@@ -5,31 +5,32 @@ class Program
 {
     static void Main(string[] args)
     {
-        var options = new MenuOptions();
-
         int option = 0;
-
         do
         {
-            options.PrintOptions();
-            Write("Option: ");
+            var menu = new MenuOptions();
+            menu.PrintOptions();
             option = int.Parse(ReadLine());
+            Clear();
 
             switch (option)
-            {
-                case 1:
-                    var vehicle = new Vehicle();
-                    vehicle.GetBodyType();
-                    vehicle.GetMake();
-                    vehicle.GetModel();
-                break;
-                
-                default:
-                break;
-            }
+                {
+                    case 1:
+                        var vehicle = new Vehicle();
+                            vehicle.SetBodyType();
+                            vehicle.SetMake();
+                            vehicle.SetModel();
+                    break;
 
+                    case 2:
+                    break;
 
-            
-        } while (option != 6);
+                    case 3:
+                    break;
+                    
+                    default:
+                    break;
+                }            
+        } while (option != 4);
     }
 }

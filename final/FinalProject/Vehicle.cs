@@ -34,7 +34,6 @@ public class Vehicle
 
     public void SetBodyType()
     {
-        WriteLine($"Welcome to the online test drive booking program."); 
         Write("What vehicle type would you like to test-drive? ");
         _type = ReadLine();
     }
@@ -46,7 +45,7 @@ public class Vehicle
 
     public void SetMake()
     {
-        Write("What is the make of the vehicle? ");
+        Write($"What is the make of this {_type}? ");
         _make = ReadLine();
     }
 
@@ -57,8 +56,8 @@ public class Vehicle
 
     public void SetModel()
     {
-        Write("What is the model of the vehicle? ");
-        _make = ReadLine();
+        Write($"What is the model of this {_make}? ");
+        _model = ReadLine();
     }
 
     public virtual string GetVINumber()
