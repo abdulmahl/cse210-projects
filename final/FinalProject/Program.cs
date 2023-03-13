@@ -20,8 +20,6 @@ class Program
             Write("What would you like to do? ");
             option = int.Parse(ReadLine());
 
-            Clear();
-
             switch (option)
                 {
                     case 1:
