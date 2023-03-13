@@ -1,7 +1,8 @@
 using System;
 using static System.Console;
+using System.IO;
 
-public class Vehicle
+public abstract class Vehicle
 {
     protected string _type = "";
     protected string _make = "";
@@ -32,7 +33,18 @@ public class Vehicle
 
     public Vehicle()
     {
-
+        Write("What vehicle type would you like to test-drive? ");
+        _type = ReadLine();
+        Write($"What is the make of this {this._type}? ");
+        _make = ReadLine();
+        Write($"What model is this {this._make}? ");
+        _model = ReadLine();
+        Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
+        _date = DateTime.Parse(ReadLine());
+        WriteLine("Your selection has been recorded");
+        Write("Press return to go back to the main menu... ");
+        ReadLine();
+        Clear();
     }
 
     public string GetBodyType()
@@ -40,32 +52,14 @@ public class Vehicle
         return this._type;
     }
 
-    public void SetBodyType()
-    {
-        Write("What vehicle type would you like to test-drive? ");
-        _type = ReadLine();
-    }
-
     public string GetMake()
     {
         return this._make;
     }
 
-    public void SetMake()
-    {
-        Write($"What is the make of this {this._type}? ");
-        _make = ReadLine();
-    }
-
     public string GetModel()
     {
         return this._model;
-    }
-
-    public void SetModel()
-    {
-        Write($"What model is this {this._make}? ");
-        _model = ReadLine();
     }
 
     public DateTime GetDateTime()
@@ -75,12 +69,6 @@ public class Vehicle
 
     public void SetDateTime()
     {
-        Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
-        _date = DateTime.Parse(ReadLine());
-        WriteLine("Your selection has been recorded");
-        Write("Press return to go back to the main menu... ");
-        ReadLine();
-        Clear();
     }
 
     public virtual void GetVehicleSpecs(int number)

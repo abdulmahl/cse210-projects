@@ -6,6 +6,12 @@ public class Crossover : Vehicle
 
     }
 
+    public Crossover()
+    : base()
+    {
+        
+    }
+
     public string GetVINumber() // Subaru Outback
     {
         return "4S4BSBDC5F3315222";

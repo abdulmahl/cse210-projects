@@ -6,6 +6,12 @@ public class SUV : Vehicle
 
     }
 
+    public SUV()
+    : base()
+    {
+        
+    }
+
     public string GetVINumber() // Land Rover Discovery
     {
         return "SALVA2AG0DH710610";

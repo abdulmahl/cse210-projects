@@ -6,6 +6,12 @@ public class Convertible : Vehicle
 
     }
 
+    public Convertible()
+    : base()
+    {
+        
+    }
+
     public string GetVINumber() // Mercedes-Benz SLK 
     {
         return "WDBKK65F61F198941";

@@ -9,6 +9,12 @@ public class Sedan : Vehicle
 
     }
 
+    public Sedan()
+    : base()
+    {
+        
+    }
+
     public string GetVINumber() // Lexus IS350
     {
         base._viNumber = "JT8BE262665000481";

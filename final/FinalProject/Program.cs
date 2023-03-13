@@ -3,9 +3,9 @@ using static System.Console;
 
 class Program
 {
-    List<Vehicle> vehicles = new List<Vehicle>();
     static void Main(string[] args)
     {
+        List<Vehicle> vehicles = new List<Vehicle>();
         int option = 0;
         do
         {
@@ -23,11 +23,51 @@ class Program
             switch (option)
                 {
                     case 1:
-                    var sedan = new Vehicle();
-                        sedan.SetBodyType();
-                        sedan.SetMake();
-                        sedan.SetModel();
-                        sedan.SetDateTime();
+                        int subOption = 0;
+                        Clear();
+                        WriteLine("The types of vehicles are:");
+                        WriteLine("  1. Sedans");
+                        WriteLine("  2. Sports Cars");
+                        WriteLine("  3. SUVs");
+                        WriteLine("  4. Hatchbacks");
+                        WriteLine("  5. Minivans");
+                        WriteLine("  6. Convertibles");
+                        WriteLine("  7. Coupes");
+                        WriteLine("  8. Crossovers");
+                        Write("Which vehicle type would you like to add? ");
+                        subOption = int.Parse(ReadLine());
+                        Clear();
+                        switch (subOption)
+                        {
+                            case 1:
+                                var sedan = new Sedan();
+                                vehicles.Add(sedan);
+                            break;
+
+                            case 2:
+                                var sportsCar = new SportsCar();
+                                vehicles.Add(sportsCar);
+                            break;
+
+                            case 3:
+                            break;
+
+                            case 4:
+                            break;
+
+                            case 5:
+                            break;
+
+                            case 6:
+                            break;
+
+                            case 7:
+                            break;
+
+                            case 8:
+                            break;
+                        
+                        }                        
                     break;
 
                     case 2:

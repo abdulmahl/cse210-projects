@@ -6,6 +6,12 @@ public class SportsCar : Vehicle
 
     }
 
+    public SportsCar()
+    : base()
+    {
+        
+    }
+
     public string GetVINumber()
     {
         return "WBAAV33451EE76139";

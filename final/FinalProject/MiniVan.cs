@@ -6,6 +6,12 @@ public class MiniVan : Vehicle
 
     }
 
+    public MiniVan()
+    : base()
+    {
+        
+    }
+
     public string GetVINumber()  // Chrysler Town and Country
     {
         return "2C4PC1AG5DR790348";

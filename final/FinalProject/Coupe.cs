@@ -6,6 +6,12 @@ public class Coupe : Vehicle
 
     }
 
+    public Coupe()
+    : base()
+    {
+        
+    }
+
     public string GetVINumber() // Aston Martin Vanquish
     {
         return "SCFPDCGP4EGK01312";

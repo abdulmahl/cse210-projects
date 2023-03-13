@@ -6,6 +6,12 @@ public class Hatchback : Vehicle
 
     }
 
+    public Hatchback()
+    : base()
+    {
+        
+    }
+
     public string GetVINumber()  // Volvo V60
     {
         return "YV140MEB0F1195985";
