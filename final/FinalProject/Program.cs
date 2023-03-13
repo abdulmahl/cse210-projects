@@ -5,8 +5,31 @@ class Program
 {
     static void Main(string[] args)
     {
-       var make = new Vehicle();
-       make.SetTypeVehicle();
-       WriteLine($"You have chosen to test-drive a: {make.GetTypeVehicle()}");
+        var options = new MenuOptions();
+
+        int option = 0;
+
+        do
+        {
+            options.PrintOptions();
+            Write("Option: ");
+            option = int.Parse(ReadLine());
+
+            switch (option)
+            {
+                case 1:
+                    var vehicle = new Vehicle();
+                    vehicle.GetBodyType();
+                    vehicle.GetMake();
+                    vehicle.GetModel();
+                break;
+                
+                default:
+                break;
+            }
+
+
+            
+        } while (option != 6);
     }
 }

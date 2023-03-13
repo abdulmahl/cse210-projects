@@ -27,9 +27,16 @@ public class Vehicle
 
     }
 
-    public string GetTypeVehicle()
+    public string GetBodyType()
     {
         return this._type;
+    }
+
+    public void SetBodyType()
+    {
+        WriteLine($"Welcome to the online test drive booking program."); 
+        Write("What vehicle type would you like to test-drive? ");
+        _type = ReadLine();
     }
 
     public string GetMake()
@@ -37,10 +44,10 @@ public class Vehicle
         return this._make;
     }
 
-    public void SetTypeVehicle()
+    public void SetMake()
     {
-        Write("What vehicle type would you like to test-drive? ");
-        _type = ReadLine();
+        Write("What is the make of the vehicle? ");
+        _make = ReadLine();
     }
 
     public string GetModel()
@@ -48,22 +55,28 @@ public class Vehicle
         return this._model;
     }
 
-    string GetVINumber()
+    public void SetModel()
+    {
+        Write("What is the model of the vehicle? ");
+        _make = ReadLine();
+    }
+
+    public virtual string GetVINumber()
     {
         return this._viNumber;
     }
 
-    int GetYear()
+    public virtual int GetYear()
     {
         return this._year;
     }
 
-    string GetEngineSize()
+    public virtual string GetEngineSize()
     {
         return this._engineSize;
     }
 
-    string GetTransmission()
+    public virtual string GetTransmission()
     {
         return this._transmission;
     }
