@@ -71,7 +71,12 @@ class Program
                     break;
 
                     case 2:
-                  
+                        int i = 0;
+                        foreach (var vehicle in vehicles)
+                        {
+                            i++;
+                            vehicle.GetVehicleSpecs(i);
+                        }
                     break;
 
                     case 3:

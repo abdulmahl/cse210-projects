@@ -47,11 +47,6 @@ public abstract class Vehicle
         Clear();
     }
 
-    public string GetBodyType()
-    {
-        return this._type;
-    }
-
     public string GetMake()
     {
         return this._make;
