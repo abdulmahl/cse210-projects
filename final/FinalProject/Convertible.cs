@@ -59,8 +59,8 @@ public class Convertible : Vehicle
         WriteLine($"{number}. {base._make} {base._model} with the following specifications");
         WriteLine("************************************************");
         WriteLine($"Body Type: {base._type}");
-        WriteLine($"Roof: {this.GetRoof()}");
-        WriteLine($"Seats: {this.GetSeats()}");
+        WriteLine($"Roof Type: {this.GetRoof()}");
+        WriteLine($"Seat Material: {this.GetSeats()}");
         WriteLine($"Horse Power: {this.GetHorsePower()}");
         WriteLine($"Vin Number: {this.GetVINumber()}");
         WriteLine($"Engine Size: {this.GetEngineSize()}");
