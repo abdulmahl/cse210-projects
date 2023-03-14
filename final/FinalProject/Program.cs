@@ -38,7 +38,6 @@ class Program
             ShowMenu();
             option = int.Parse(ReadLine());
 
-
             switch (option)
             {
                 case 1:
@@ -50,22 +49,25 @@ class Program
                     {
                         case 1:
                             Clear();
+                            WriteLine();
                             var sedan = new Sedan();
                             vehicles.Add(sedan);
                         break;
 
                         case 2:
-                        WriteLine();
+                            WriteLine();
                             var sportsCar = new SportsCar("Leather", "24\" Allow");
                             vehicles.Add(sportsCar);
                         break;
 
                         case 3:
+                            WriteLine();
                             var suv = new SUV("7 Seater");
                             vehicles.Add(suv);
                         break;
 
                         case 4:
+                            WriteLine();
                             var hatch = new Hatchback("Electric", "Pin on Top");
                             vehicles.Add(hatch);
                         break;
@@ -76,16 +78,19 @@ class Program
                         break;
 
                         case 6:
+                            WriteLine();
                             var convertible = new Convertible("Leather Roof", "Ostrich Leather Seats", "600 HP");
                             vehicles.Add(convertible);
                         break;
 
                         case 7:
+                            WriteLine();
                             var coupe = new Coupe("Lucid Red", "All Wheel Drive", "Front Engine");
                             vehicles.Add(coupe);
                         break;
 
                         case 8:
+                            WriteLine();
                             var crossOver = new Crossover("Tinted Windows", "LCD 8\" Retina Display");
                             vehicles.Add(crossOver);
                         break;
@@ -98,10 +103,6 @@ class Program
                 break;
 
                 case 2:
-                   
-                break;
-
-                case 3:
                     Clear();
                     int i = 0;
                     Write($"\nThe vehicles are:\n");
@@ -110,9 +111,23 @@ class Program
                         i++;
                         vehicle.GetVehicleSpecs(i);
                     }
+                    WriteLine();
+                break;
+
+                case 3:
+                    Clear();
+                    int j = 0;
+                    Write($"\nThe vehicles in your list are:\n\n");
+                    foreach (var vehicle in vehicles)
+                    {
+                        j++;
+                        vehicle.GetSpecs(j);
+                    }
+                    WriteLine();
                 break;
 
                 case 4:
+
                 break;
                 
                 default:

@@ -60,4 +60,9 @@ public class Hatchback : Vehicle
         WriteLine($"Year of Make: {this.GetYear()}");
         WriteLine($"************************************************\n");
     }
+
+    public override void GetSpecs(int number)
+    {
+        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Hatchback");
+    }
 }

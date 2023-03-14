@@ -53,7 +53,7 @@ public class Sedan : Vehicle
 
     public override void GetSpecs(int number)
     {
-        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}");
+        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Sedan");
     }
 
     public override string SaveToFile()
