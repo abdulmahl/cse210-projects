@@ -71,22 +71,22 @@ class Program
                         break;
 
                         case 5:
-                            var miniVan = new MiniVan();
+                            var miniVan = new MiniVan("4 Door with Sliding Side Door ");
                             vehicles.Add(miniVan);
                         break;
 
                         case 6:
-                            var convertible = new Convertible();
+                            var convertible = new Convertible("Leather Roof", "Ostrich Leather Seats", "600 HP");
                             vehicles.Add(convertible);
                         break;
 
                         case 7:
-                            var coupe = new Coupe();
+                            var coupe = new Coupe("Lucid Red", "All Wheel Drive", "Front Engine");
                             vehicles.Add(coupe);
                         break;
 
                         case 8:
-                            var crossOver = new Crossover();
+                            var crossOver = new Crossover("Tinted Windows", "LCD 8\" Retina Display");
                             vehicles.Add(crossOver);
                         break;
 

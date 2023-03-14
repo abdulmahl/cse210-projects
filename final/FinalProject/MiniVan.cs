@@ -2,16 +2,22 @@ using static System.Console;
 
 public class MiniVan : Vehicle
 {
+    private string _doors = "";
     public MiniVan(string type, string make, string model, string viNumber, int year, string engineSize, string transmission) 
     : base(type, make, model, viNumber, year, engineSize, transmission)
     {
 
     }
 
-    public MiniVan()
+    public MiniVan(string doors)
     : base()
     {
-        
+        this._doors = doors;
+    }
+
+    public string GetDoors()
+    {
+        return this._doors;
     }
 
     public string GetVINumber()  // Chrysler Town and Country
@@ -39,6 +45,7 @@ public class MiniVan : Vehicle
         WriteLine($"{number}. {base._make} {base._model} with the following specifications");
         WriteLine("************************************************");
         WriteLine($"Body Type: {base._type}");
+        WriteLine($"Doors: {this.GetDoors()}");
         WriteLine($"Vin Number: {this.GetVINumber()}");
         WriteLine($"Engine Size: {this.GetEngineSize()}");
         WriteLine($"Transmission: {this.GetTransmission()}");

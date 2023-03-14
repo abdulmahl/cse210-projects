@@ -16,12 +16,12 @@ public class SportsCar : Vehicle
         this._wheels = wheels;
     }
 
-    public string GetSeats()
+    string GetSeats()
     {
         return this._seats;
     }
 
-    public string GetWheels()
+    string GetWheels()
     {
         return this._wheels;
     }
