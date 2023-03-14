@@ -41,8 +41,14 @@ public class Sedan : Vehicle
 
     public override void GetVehicleSpecs(int number)
     {
-        string specs = $"{base._make} {base._model}, {base._type} Vin Number: {this.GetVINumber()} Engine Size: {this.GetEngineSize()} Transmission: {this.GetTransmission()}";
-        WriteLine($"{number}. {specs} {this.GetYear()}");
+        WriteLine($"{number}. {base._make} {base._model} with the following specifications");
+        WriteLine("************************************************");
+        WriteLine($"Body Type: {base._type}");
+        WriteLine($"Vin Number: {this.GetVINumber()}");
+        WriteLine($"Engine Size: {this.GetEngineSize()}");
+        WriteLine($"Transmission: {this.GetTransmission()}");
+        WriteLine($"Year of Make: {this.GetYear()}");
+        WriteLine($"************************************************\n");
     }
 
     public override void GetSpecs(int number)

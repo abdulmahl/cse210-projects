@@ -25,11 +25,6 @@ public abstract class Vehicle
         this._transmission = transmission;
     }
 
-    public Vehicle(DateTime date)
-    {
-        this._date = date;
-    }
-
     public Vehicle()
     {
         Write("What vehicle type would you like to test-drive? ");
@@ -40,6 +35,7 @@ public abstract class Vehicle
         _model = ReadLine();
         Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
         _date = DateTime.Parse(ReadLine());
+        Clear();
     }
 
     public string GetMake()
@@ -63,8 +59,8 @@ public abstract class Vehicle
 
     public virtual void GetVehicleSpecs(int number)
     {
-        string specs =  $"{this._make} {this._model}, {this._type} Vin Number: {this._viNumber} Engine Size: {this._engineSize} Transmission: {this._transmission}";
-        WriteLine($"{number}. {specs} {this._year}");
+        string specs =  $"Make and Model: {this._make} {this._model}\nBody Type: {this._type}\nVin Number: {this._viNumber}\nEngine Size: {this._engineSize}\nTransmission: {this._transmission}";
+        WriteLine($"{number}. {specs}\nYear of Make: {this._year}");
     }
 
     public virtual void GetSpecs(int number)
