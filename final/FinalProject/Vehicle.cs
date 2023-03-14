@@ -1,6 +1,5 @@
 using System;
 using static System.Console;
-using System.IO;
 
 public abstract class Vehicle
 {
@@ -41,9 +40,6 @@ public abstract class Vehicle
         _model = ReadLine();
         Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
         _date = DateTime.Parse(ReadLine());
-        WriteLine("Your selections have been recorded");
-        Write("Press enter to exit to the main menu ");
-        ReadLine();
     }
 
     public string GetMake()
