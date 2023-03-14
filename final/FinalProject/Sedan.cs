@@ -51,7 +51,7 @@ public class Sedan : Vehicle
         WriteLine($"************************************************\n");
     }
 
-    public override void GetSpecs(int number)
+    public override void GetVehicle(int number)
     {
         WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Sedan");
     }

@@ -63,7 +63,7 @@ public abstract class Vehicle
         WriteLine($"{number}. {specs}\nYear of Make: {this._year}");
     }
 
-    public virtual void GetSpecs(int number)
+    public virtual void GetVehicle(int number)
     {
         string specs = $"{this._make} {this._model} {this._year}";
         WriteLine($"{number}. {specs}");

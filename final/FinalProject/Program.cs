@@ -121,7 +121,7 @@ class Program
                     foreach (var vehicle in vehicles)
                     {
                         j++;
-                        vehicle.GetSpecs(j);
+                        vehicle.GetVehicle(j);
                     }
                     WriteLine();
                 break;
