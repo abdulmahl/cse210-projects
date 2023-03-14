@@ -41,10 +41,9 @@ public abstract class Vehicle
         _model = ReadLine();
         Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
         _date = DateTime.Parse(ReadLine());
-        WriteLine("Your selection has been recorded");
-        Write("Press return to go back to the main menu... ");
+        WriteLine("Your selections have been recorded");
+        Write("Press enter to exit to the main menu ");
         ReadLine();
-        Clear();
     }
 
     public string GetMake()
