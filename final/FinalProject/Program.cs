@@ -92,7 +92,7 @@ class Program
 
                         case 8:
                             Clear();
-                            var crossOver = new Crossover("Tinted Windows", "LCD 8\" Retina Display");
+                            var crossOver = new Crossover("Tinted Windows", "8\" LCD Retina Display");
                             vehicles.Add(crossOver);
                         break;
 
