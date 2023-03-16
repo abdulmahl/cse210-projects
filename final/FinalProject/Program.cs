@@ -127,7 +127,8 @@ class Program
                 break;
 
                 case 4:
-
+                    var save = new Sedan();
+                    save.SaveToFile();
                 break;
                 
                 default:

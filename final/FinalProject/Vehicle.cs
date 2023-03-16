@@ -11,8 +11,6 @@ public abstract class Vehicle
     protected string _engineSize = "";
     protected string _transmission = "";
     protected DateTime _date;
-    protected bool _tested = false;
-
 
     public Vehicle(string type, string make, string model, string viNumber, int year, string engineSize, string transmission)
     {
@@ -69,8 +67,8 @@ public abstract class Vehicle
         WriteLine($"{number}. {specs}");
     }
 
-    public virtual string SaveToFile()
+    public virtual void SaveToFile()
     {
-        return $"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission},{this._tested}";
+        WriteLine($"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}");
     }
 }
