@@ -46,7 +46,7 @@ public class Convertible : Vehicle
 
     public string GetEngineSize()
     {
-        return "2.8 Litre";
+        return "3.2 Litre";
     }
 
     public string GetTransmission()
