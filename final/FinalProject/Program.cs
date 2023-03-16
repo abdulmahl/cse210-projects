@@ -105,7 +105,7 @@ class Program
                 case 2:
                     Clear();
                     int i = 0;
-                    Write($"\nThe vehicles are:\n");
+                    WriteLine($"\nThe vehicles are:\n");
                     foreach (var vehicle in vehicles)
                     {
                         i++;
@@ -117,7 +117,7 @@ class Program
                 case 3:
                     Clear();
                     int j = 0;
-                    Write($"\nThe vehicles in your list are:\n\n");
+                    WriteLine($"\nThe vehicles in your list are:");
                     foreach (var vehicle in vehicles)
                     {
                         j++;
