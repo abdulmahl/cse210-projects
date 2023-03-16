@@ -66,7 +66,7 @@ public class Convertible : Vehicle
         WriteLine($"Engine Size: {this.GetEngineSize()}");
         WriteLine($"Transmission: {this.GetTransmission()}");
         WriteLine($"Year of Make: {this.GetYear()}");
-        WriteLine("-------------------------------------------------\n");
+        WriteLine("-------------------------------------------------");
     }
 
     public override void GetVehicle(int number)

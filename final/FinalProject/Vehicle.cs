@@ -59,8 +59,8 @@ public abstract class Vehicle
 
     public virtual void GetVehicleSpecs(int number)
     {
-        string specs =  $"Make and Model: {this._make} {this._model}\nBody Type: {this._type}\nVin Number: {this._viNumber}\nEngine Size: {this._engineSize}\nTransmission: {this._transmission}";
-        WriteLine($"{number}. {specs}\nYear of Make: {this._year}");
+        string specs =  $"Make and Model: {this._make} {this._model} Body Type: {this._type} Vin Number: {this._viNumber} Engine Size: {this._engineSize} Transmission: {this._transmission}";
+        WriteLine($"{number}. {specs} Year of Make: {this._year}");
     }
 
     public virtual void GetVehicle(int number)
