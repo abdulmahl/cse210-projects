@@ -71,7 +71,7 @@ public class Coupe : Vehicle
 
     public override void GetVehicle(int number)
     {
-        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Coupe");
+        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, {base._type}");
     }
 
     public override string SaveToFile()

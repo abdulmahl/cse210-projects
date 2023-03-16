@@ -53,11 +53,11 @@ public class Sedan : Vehicle
 
     public override void GetVehicle(int number)
     {
-        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Sedan");
+        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, {base._type}");
     }
 
     public override string SaveToFile()
     {
-        return $"Sedan: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()}";
+        return $"Sedan: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()}, {base._date}";
     }
 }

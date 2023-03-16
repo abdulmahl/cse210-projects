@@ -63,7 +63,7 @@ public class Hatchback : Vehicle
 
     public override void GetVehicle(int number)
     {
-        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Hatchback");
+        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, {base._type}");
     }
 
     public override string SaveToFile()

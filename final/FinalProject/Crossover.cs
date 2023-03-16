@@ -64,7 +64,7 @@ public class Crossover : Vehicle
 
     public override void GetVehicle(int number)
     {
-        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Crossover");
+        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, {base._type}");
     }
 
     public override string SaveToFile()

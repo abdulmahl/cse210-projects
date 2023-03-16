@@ -6,6 +6,7 @@ class Program
     static void Main(string[] args)
     {
         List<Vehicle> vehicles = new List<Vehicle>();
+        DateTime date = DateTime.Now;
 
         void ShowMenu()
         {
@@ -127,10 +128,8 @@ class Program
                 break;
 
                 case 4:
-                    foreach (var save in vehicles)
-                    {
-                        save.SaveToFile();
-                    }
+                    var save = new SaveVehicle();
+                    save.Save(vehicles, date);
                 break;
                 
                 default:
