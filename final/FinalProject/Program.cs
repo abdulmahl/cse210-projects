@@ -118,7 +118,7 @@ class Program
                 case 3:
                     Clear();
                     int j = 0;
-                    WriteLine($"\nThe vehicles in your list are:");
+                    WriteLine($"\nThe listed vehicles are:");
                     foreach (var vehicle in vehicles)
                     {
                         j++;
