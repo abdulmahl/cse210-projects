@@ -65,4 +65,9 @@ public class Hatchback : Vehicle
     {
         WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Hatchback");
     }
+
+    public override string SaveToFile()
+    {
+        return $"Hatchback: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+    }
 }

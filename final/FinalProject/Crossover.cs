@@ -66,4 +66,9 @@ public class Crossover : Vehicle
     {
         WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Crossover");
     }
+
+    public override string SaveToFile()
+    {
+        return $"Crossover: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+    }
 }

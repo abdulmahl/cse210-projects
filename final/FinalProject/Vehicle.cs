@@ -26,25 +26,14 @@ public abstract class Vehicle
     public Vehicle()
     {
         Write("What vehicle type would you like to test-drive? ");
-        _type = ReadLine();
+        this._type = ReadLine();
         Write($"What is the make of this {this._type}? ");
-        _make = ReadLine();
+       this. _make = ReadLine();
         Write($"What model is this {this._make}? ");
-        _model = ReadLine();
+        this._model = ReadLine();
         Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
-        _date = DateTime.Parse(ReadLine());
+        this._date = DateTime.Parse(ReadLine());
         Clear();
-    }
-    
-    public Vehicle(DateTime date)
-    {
-        Write("What is the name of the file? ");
-        var fileName = ReadLine();
-        using (StreamWriter sw = new StreamWriter(fileName))
-        {
-            sw.WriteLine($"{date}");
-            sw.WriteLine($"Sedan: {this._make},{this._model},{this._type}");
-        }
     }
 
     public string GetMake()
@@ -73,9 +62,8 @@ public abstract class Vehicle
         WriteLine($"{number}. {specs}");
     }
 
-    public virtual void SaveToFile(DateTime date)
+    public virtual string SaveToFile()
     {
-        WriteLine(date);
-        WriteLine($"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}");
+        return $"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}, {this._date}";
     }
 }

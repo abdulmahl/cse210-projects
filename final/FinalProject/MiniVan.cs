@@ -57,4 +57,9 @@ public class MiniVan : Vehicle
     {
         WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Minivan");
     }
+
+    public override string SaveToFile()
+    {
+        return $"Minivan: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+    }
 }

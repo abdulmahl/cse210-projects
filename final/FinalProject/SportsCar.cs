@@ -64,4 +64,9 @@ public class SportsCar : Vehicle
     {
         WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Sports Car");
     }
+
+    public override string SaveToFile()
+    {
+        return $"Sports Car: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+    }
 }

@@ -73,4 +73,9 @@ public class Coupe : Vehicle
     {
         WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Coupe");
     }
+
+    public override string SaveToFile()
+    {
+        return $"Coupe: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+    }
 }

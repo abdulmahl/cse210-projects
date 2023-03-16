@@ -129,7 +129,7 @@ class Program
                 case 4:
                     foreach (var save in vehicles)
                     {
-                        save.SaveToFile(DateTime.Now);
+                        save.SaveToFile();
                     }
                 break;
                 

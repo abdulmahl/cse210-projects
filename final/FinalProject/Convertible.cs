@@ -73,4 +73,9 @@ public class Convertible : Vehicle
     {
         WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Convertible");
     }
+
+    public override string SaveToFile()
+    {
+        return $"Convertible: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+    }
 }

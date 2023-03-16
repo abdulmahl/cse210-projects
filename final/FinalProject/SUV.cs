@@ -56,4 +56,9 @@ public class SUV : Vehicle
     {
         WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, SUV");
     }
+
+    public override string SaveToFile()
+    {
+        return $"SUV: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+    }
 }
