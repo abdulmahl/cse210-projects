@@ -8,42 +8,18 @@ class Program
         List<Vehicle> vehicles = new List<Vehicle>();
         DateTime date = DateTime.Now;
 
-        void ShowMenu()
-        {
-            WriteLine($"Select one of the following menu options");
-            WriteLine("  1. Enter Vehicle Details");
-            WriteLine("  2. Get Vehicle Description");
-            WriteLine("  3. List Entered Vehicles");
-            WriteLine("  4. Save Listed Vehicles");
-            WriteLine("  5. Exit");
-            Write("What would you like to do? ");
-        }
-
-        void ShowSubMenu()
-        {
-            WriteLine("The types of vehicles are");
-            WriteLine("  1. Sedans");
-            WriteLine("  2. Sports Cars");
-            WriteLine("  3. SUVs");
-            WriteLine("  4. Hatchbacks");
-            WriteLine("  5. Minivans");
-            WriteLine("  6. Convertibles");
-            WriteLine("  7. Coupes");
-            WriteLine("  8. Crossovers");
-            Write("Which vehicle would you like to add? ");
-        }
-
         int option = 0;
         while (option != 5)
         {
-            ShowMenu();
+            var show = new SaveVehicle();
+            show.ShowMenu();
             option = int.Parse(ReadLine());
 
             switch (option)
             {
                 case 1:
                     int subOption = 0;
-                    ShowSubMenu();
+                    show.ShowSubMenu();
                     subOption = int.Parse(ReadLine());
                     
                     switch (subOption)
