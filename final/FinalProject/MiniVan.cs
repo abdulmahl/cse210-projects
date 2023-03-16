@@ -3,12 +3,7 @@ using static System.Console;
 public class MiniVan : Vehicle
 {
     private string _doors = "";
-    public MiniVan(string type, string make, string model, string viNumber, int year, string engineSize, string transmission) 
-    : base(type, make, model, viNumber, year, engineSize, transmission)
-    {
-
-    }
-
+    
     public MiniVan(string doors)
     : base()
     {

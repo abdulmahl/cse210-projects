@@ -5,11 +5,6 @@ public class Convertible : Vehicle
     private string _roof = "";
     private string _seats = "";
     private string _horsePower = "";
-    public Convertible(string type, string make, string model, string viNumber, int year, string engineSize, string transmission) 
-    : base(type, make, model, viNumber, year, engineSize, transmission)
-    {
-
-    }
 
     public Convertible(string roof, string seats, string horsePower)
     : base()

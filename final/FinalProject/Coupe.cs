@@ -5,11 +5,6 @@ public class Coupe : Vehicle
     private string _color = "";
     private string _wheelDrive = "";
     private string _enginePlace = "";
-    public Coupe(string type, string make, string model, string viNumber, int year, string engineSize, string transmission) 
-    : base(type, make, model, viNumber, year, engineSize, transmission)
-    {
-
-    }
 
     public Coupe(string color, string wheelDrive, string enginePlace)
     : base()

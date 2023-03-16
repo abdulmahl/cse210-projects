@@ -4,13 +4,7 @@ public class Crossover : Vehicle
 {
     private string _windows = "";
     private string _display = "";
-
-    public Crossover(string type, string make, string model, string viNumber, int year, string engineSize, string transmission) 
-    : base(type, make, model, viNumber, year, engineSize, transmission)
-    {
-
-    }
-
+    
     public Crossover(string windows, string display)
     : base()
     {

@@ -12,17 +12,6 @@ public abstract class Vehicle
     protected string _transmission = "";
     protected DateTime _date;
 
-    public Vehicle(string type, string make, string model, string viNumber, int year, string engineSize, string transmission)
-    {
-        this._type = type;
-        this._make = make;
-        this._model = model;
-        this._viNumber = viNumber;
-        this._year = year;
-        this._engineSize = engineSize;
-        this._transmission = transmission;
-    }
-
     public Vehicle()
     {
         Write("What vehicle type would you like to test-drive? ");
