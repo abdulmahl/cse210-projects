@@ -56,13 +56,14 @@ public class Sedan : Vehicle
         WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, Sedan");
     }
 
-    public void SaveToFile()
+    public override void SaveToFile(DateTime date)
     {
         Write("What is the name of the file? ");
         var fileName = ReadLine();
         using (StreamWriter sw = new StreamWriter(fileName))
         {
-            sw.WriteLine($"Sedan: {this._make},{this._model},{this._type},{this.GetEngineSize()},{this.GetTransmission()}");
+            sw.WriteLine($"{date}");
+            sw.WriteLine($"Sedan: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()}");
         }
     }
 }

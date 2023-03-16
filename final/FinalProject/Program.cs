@@ -127,8 +127,10 @@ class Program
                 break;
 
                 case 4:
-                    var save = new Sedan();
-                    save.SaveToFile();
+                    foreach (var save in vehicles)
+                    {
+                        save.SaveToFile(DateTime.Now);
+                    }
                 break;
                 
                 default:

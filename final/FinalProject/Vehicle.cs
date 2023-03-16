@@ -35,6 +35,17 @@ public abstract class Vehicle
         _date = DateTime.Parse(ReadLine());
         Clear();
     }
+    
+    public Vehicle(DateTime date)
+    {
+        Write("What is the name of the file? ");
+        var fileName = ReadLine();
+        using (StreamWriter sw = new StreamWriter(fileName))
+        {
+            sw.WriteLine($"{date}");
+            sw.WriteLine($"Sedan: {this._make},{this._model},{this._type}");
+        }
+    }
 
     public string GetMake()
     {
@@ -44,11 +55,6 @@ public abstract class Vehicle
     public string GetModel()
     {
         return this._model;
-    }
-
-    public DateTime GetDateTime()
-    {
-        return this._date;
     }
 
     public void SetDateTime()
@@ -67,8 +73,9 @@ public abstract class Vehicle
         WriteLine($"{number}. {specs}");
     }
 
-    public virtual void SaveToFile()
+    public virtual void SaveToFile(DateTime date)
     {
+        WriteLine(date);
         WriteLine($"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}");
     }
 }
