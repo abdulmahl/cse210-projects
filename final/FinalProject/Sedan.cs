@@ -42,7 +42,7 @@ public class Sedan : Vehicle
     public override void GetVehicleSpecs(int number)
     {
         WriteLine($"{number}. {base._make} {base._model} with the following specifications");
-        WriteLine("-------------------------------------------------\n");
+        WriteLine("------------------------------------------------");
         WriteLine($"Body Type: {base._type}");
         WriteLine($"Vin Number: {this.GetVINumber()}");
         WriteLine($"Engine Size: {this.GetEngineSize()}");

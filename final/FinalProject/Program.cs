@@ -49,48 +49,48 @@ class Program
                     {
                         case 1:
                             Clear();
-                            WriteLine();
                             var sedan = new Sedan();
                             vehicles.Add(sedan);
                         break;
 
                         case 2:
-                            WriteLine();
+                            Clear();
                             var sportsCar = new SportsCar("Leather", "24\" Allow");
                             vehicles.Add(sportsCar);
                         break;
 
                         case 3:
-                            WriteLine();
+                            Clear();
                             var suv = new SUV("7 Seater");
                             vehicles.Add(suv);
                         break;
 
                         case 4:
-                            WriteLine();
+                            Clear();
                             var hatch = new Hatchback("Electric", "Pin on Top");
                             vehicles.Add(hatch);
                         break;
 
                         case 5:
+                            Clear();
                             var miniVan = new MiniVan("4 Door with Sliding Side Door ");
                             vehicles.Add(miniVan);
                         break;
 
                         case 6:
-                            WriteLine();
+                            Clear();
                             var convertible = new Convertible("Leather Roof", "Ostrich Leather Seats", "600 HP");
                             vehicles.Add(convertible);
                         break;
 
                         case 7:
-                            WriteLine();
+                            Clear();
                             var coupe = new Coupe("Lucid Red", "All Wheel Drive", "Front Engine");
                             vehicles.Add(coupe);
                         break;
 
                         case 8:
-                            WriteLine();
+                            Clear();
                             var crossOver = new Crossover("Tinted Windows", "LCD 8\" Retina Display");
                             vehicles.Add(crossOver);
                         break;
