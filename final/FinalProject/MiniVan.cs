@@ -55,6 +55,6 @@ public class MiniVan : Vehicle
 
     public override string SaveToFile()
     {
-        return $"Minivan: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date.ToShortDateString()}";
+        return $"Minivan: {base._make},{base._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date.ToShortDateString()}";
     }
 }
