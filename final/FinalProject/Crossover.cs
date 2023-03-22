@@ -63,6 +63,6 @@ public class Crossover : Vehicle
 
     public override string SaveToFile()
     {
-        return $"Crossover: {base._make},{base._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date.ToShortDateString()}";
+        return $"Crossover: {base._make},{base._model},{this.GetEngineSize()},{this.GetTransmission()}, {base._testDrive}, {base._phoneNumber}, {base._date.ToShortDateString()}";
     }
 }
