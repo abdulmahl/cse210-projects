@@ -19,7 +19,7 @@ public abstract class Vehicle
         Write("What vehicle type would you like to test-drive? ");
         this._type = ReadLine();
         Write($"What is the make of this {this._type}? ");
-       this. _make = ReadLine();
+        this. _make = ReadLine();
         Write($"What model is this {this._make}? ");
         this._model = ReadLine();
         Write("Would you like to book a test drive? ");
