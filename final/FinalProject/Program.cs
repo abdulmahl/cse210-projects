@@ -6,7 +6,6 @@ class Program
     static void Main(string[] args)
     {
         List<Vehicle> vehicles = new List<Vehicle>();
-        DateTime date = DateTime.Now;
 
         int option = 0;
         while (option != 5)
@@ -103,7 +102,7 @@ class Program
 
                 case 4: // Save to a txt file.
                     var save = new SaveVehicle();
-                    save.Save(vehicles, date);
+                    save.Save(vehicles);
                 break;
                 
                 default:

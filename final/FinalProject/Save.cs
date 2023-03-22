@@ -3,12 +3,13 @@ using static System.Console;
 
 public class SaveVehicle
 {
+    private bool _testDrive = false;
     public SaveVehicle()
     {
 
     }
 
-    public void Save(List<Vehicle> vehicles, DateTime date)
+    public void Save(List<Vehicle> vehicles)
     {
         Write("What is the name of the file? ");
         string fileName = ReadLine();
@@ -16,7 +17,15 @@ public class SaveVehicle
         {
             foreach (var save in vehicles)
             {
-                sw.WriteLine($"{save.SaveToFile()}");
+                if (_testDrive == true)
+                {
+                    sw.WriteLine($"{save.SaveToFile()}");       
+                }
+
+                else if (!_testDrive == true)
+                {
+                    sw.WriteLine($"{save.SaveToFileFalse()}");
+                }
             } 
         }
     }
