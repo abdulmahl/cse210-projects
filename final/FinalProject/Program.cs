@@ -74,12 +74,10 @@ class Program
 
                         default:
                         break;
-                    
                     }   
-
                 break;
 
-                case 2:
+                case 2: // List the vehicles and their specs.
                     Clear();
                     int i = 0;
                     WriteLine($"\nThe vehicles are:\n");
@@ -92,7 +90,7 @@ class Program
                 break;
 
                 case 3:
-                    Clear();
+                    Clear(); // List the vehicles' make, model, and year.
                     int j = 0;
                     WriteLine($"\nThe listed vehicles are:");
                     foreach (var vehicle in vehicles)
@@ -103,7 +101,7 @@ class Program
                     WriteLine();
                 break;
 
-                case 4:
+                case 4: // Save to a txt file.
                     var save = new SaveVehicle();
                     save.Save(vehicles, date);
                 break;
