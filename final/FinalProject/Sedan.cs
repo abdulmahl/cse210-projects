@@ -52,6 +52,6 @@ public class Sedan : Vehicle
 
     public override string SaveToFile()
     {
-        return $"Sedan: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()}, {base._date.ToShortDateString()}";
+        return $"Sedan: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},{base._testDrive},{base._phoneNumber},{base._date.ToShortDateString()}";
     }
 }

@@ -12,6 +12,7 @@ public abstract class Vehicle
     protected string _transmission = "";
     protected DateTime _date;
     protected string _phoneNumber;
+    protected bool _testDrive = false;
 
     public Vehicle()
     {
@@ -21,8 +22,21 @@ public abstract class Vehicle
        this. _make = ReadLine();
         Write($"What model is this {this._make}? ");
         this._model = ReadLine();
-        Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
-        this._date = DateTime.Parse(ReadLine());
+        Write("Would you like to book a test drive? ");
+        string input = ReadLine();
+            if (input == "Yes")
+            {
+                _testDrive = true;
+                Write($"On which day would you like to test-drive this {this._make} {this._model}? ");
+                this._date = DateTime.Parse(ReadLine());
+                Write("Please enter your phone number? ");
+                _phoneNumber = ReadLine();
+            }
+            else if (input == "No")
+            {
+                Clear();
+                return;
+            }
         Clear();
     }
 
@@ -34,12 +48,6 @@ public abstract class Vehicle
     public string GetModel()
     {
         return this._model;
-    }
-
-    public DateTime GetDateTime()
-    {
-        DateTime date = DateTime.Now;
-        return date;
     }
 
     public virtual void GetVehicleSpecs(int number)
@@ -56,10 +64,6 @@ public abstract class Vehicle
 
     public virtual string SaveToFile()
     {
-        Write("Would you like to book a test drive?");
-        string book = ReadLine();
-        Write("What is your phone number?");
-        _phoneNumber = ReadLine();
-        return $"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}, {this._date.ToShortDateString()} {this._phoneNumber}";
+        return $"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}, {this._date.ToShortDateString()}";
     }
 }
