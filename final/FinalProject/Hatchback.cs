@@ -63,6 +63,6 @@ public class Hatchback : Vehicle
 
     public override string SaveToFile()
     {
-        return $"Hatchback: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+        return $"Hatchback: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date.ToShortDateString()}";
     }
 }

@@ -62,6 +62,6 @@ public class SportsCar : Vehicle
 
     public override string SaveToFile()
     {
-        return $"Sports Car: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+        return $"Sports Car: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date.ToShortDateString()}";
     }
 }

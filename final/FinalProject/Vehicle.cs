@@ -11,6 +11,7 @@ public abstract class Vehicle
     protected string _engineSize = "";
     protected string _transmission = "";
     protected DateTime _date;
+    protected string _phoneNumber;
 
     public Vehicle()
     {
@@ -35,6 +36,12 @@ public abstract class Vehicle
         return this._model;
     }
 
+    public DateTime GetDateTime()
+    {
+        DateTime date = DateTime.Now;
+        return date;
+    }
+
     public virtual void GetVehicleSpecs(int number)
     {
         string specs =  $"Make and Model: {this._make} {this._model} Body Type: {this._type} Vin Number: {this._viNumber} Engine Size: {this._engineSize} Transmission: {this._transmission}";
@@ -49,6 +56,10 @@ public abstract class Vehicle
 
     public virtual string SaveToFile()
     {
-        return $"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}, {this._date}";
+        Write("Would you like to book a test drive?");
+        string book = ReadLine();
+        Write("What is your phone number?");
+        _phoneNumber = ReadLine();
+        return $"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}, {this._date.ToShortDateString()} {this._phoneNumber}";
     }
 }

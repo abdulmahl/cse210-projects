@@ -71,6 +71,6 @@ public class Convertible : Vehicle
 
     public override string SaveToFile()
     {
-        return $"Convertible: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date}";
+        return $"Convertible: {this._make},{this._model},{this.GetEngineSize()},{this.GetTransmission()},  {base._date.ToShortDateString()}";
     }
 }
