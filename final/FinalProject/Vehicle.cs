@@ -76,9 +76,4 @@ public abstract class Vehicle
     {
         return $"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}, {this._date.ToShortDateString()}";
     }
-
-    public virtual string SaveToFileFalse()
-    {
-        return $"{this._make},{this._model},{this._type},{this._engineSize},{this._transmission}, {this._date.ToShortDateString()}";
-    }
 }
