@@ -3,7 +3,6 @@ using static System.Console;
 
 public class SaveVehicle
 {
-    private bool _testDrive = false;
     public SaveVehicle()
     {
 

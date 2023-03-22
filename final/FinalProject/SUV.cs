@@ -54,6 +54,6 @@ public class SUV : Vehicle
 
     public override string SaveToFile()
     {
-        return $"SUV: {base._make},{base._model},{this.GetEngineSize()},{this.GetTransmission()}, {base._testDrive}, {base._phoneNumber}, {base._date.ToShortDateString()}";
+        return $"SUV: {base._make}, {base._model}, {this.GetEngineSize()}, {this.GetTransmission()}, {base._testDrive}, {base._phoneNumber}, {base._date.ToShortDateString()}";
     }
 }
