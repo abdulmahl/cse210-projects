@@ -17,15 +17,7 @@ public class SaveVehicle
         {
             foreach (var save in vehicles)
             {
-                if (_testDrive == true)
-                {
-                    sw.WriteLine($"{save.SaveToFile()}");       
-                }
-
-                else if (!_testDrive == true)
-                {
-                    sw.WriteLine($"{save.SaveToFileFalse()}");
-                }
+                sw.WriteLine($"{save.SaveToFile()}");       
             } 
         }
     }

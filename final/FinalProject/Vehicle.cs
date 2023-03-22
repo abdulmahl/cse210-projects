@@ -50,6 +50,16 @@ public abstract class Vehicle
         return this._model;
     }
 
+    public DateTime GetDateTime()
+    {
+        return _date;
+    }
+
+    public string GetPhoneNumber()
+    {
+        return _phoneNumber;
+    }
+
     public virtual void GetVehicleSpecs(int number)
     {
         string specs =  $"Make and Model: {this._make} {this._model} Body Type: {this._type} Vin Number: {this._viNumber} Engine Size: {this._engineSize} Transmission: {this._transmission}";
