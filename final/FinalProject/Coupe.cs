@@ -51,26 +51,27 @@ public class Coupe : Vehicle
 
     public override void GetVehicleSpecs(int number)
     {
-        WriteLine($"{number}. {base._make} {base._model} with the following specifications");
-        WriteLine("------------------------------------------------");
-        WriteLine($"Body Type: {base._type}");
-        WriteLine($"Body Color: {this.GetColor()}");
-        WriteLine($"Wheel Drive: {this.GetWheelDrive()}");
-        WriteLine($"Engine Place: {this.GetEnginePlace()}");
-        WriteLine($"Vin Number: {this.GetVINumber()}");
-        WriteLine($"Engine Size: {this.GetEngineSize()}");
-        WriteLine($"Transmission: {this.GetTransmission()}");
-        WriteLine($"Year of Make: {this.GetYear()}");
-        WriteLine("-------------------------------------------------");
+        // WriteLine($"{number}. {base._make} {base._model} with the following specifications");
+        // WriteLine("------------------------------------------------");
+        // WriteLine($"Body Type: {base._type}");
+        // WriteLine($"Body Color: {this.GetColor()}");
+        // WriteLine($"Wheel Drive: {this.GetWheelDrive()}");
+        // WriteLine($"Engine Place: {this.GetEnginePlace()}");
+        // WriteLine($"Vin Number: {this.GetVINumber()}");
+        // WriteLine($"Engine Size: {this.GetEngineSize()}");
+        // WriteLine($"Transmission: {this.GetTransmission()}");
+        // WriteLine($"Year of Make: {this.GetYear()}");
+        // WriteLine("-------------------------------------------------");
     }
 
     public override void GetVehicle(int number)
     {
-        WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, {base._type}");
+        // WriteLine($"{number}. {base.GetMake()} {base.GetModel()} {this.GetYear()}, {base._type}");
     }
 
     public override string SaveToFile()
     {
-        return $"Coupe: {base._make}, {base._model}, {this.GetEngineSize()}, {this.GetTransmission()}, {base._testDrive}, {base._phoneNumber}, {base._date.ToShortDateString()}";
+        // return $"Coupe: {base._make}, {base._model}, {this.GetEngineSize()}, {this.GetTransmission()}, {base._testDrive}, {base._phoneNumber}, {base._date.ToShortDateString()}";
+        return "";
     }
 }

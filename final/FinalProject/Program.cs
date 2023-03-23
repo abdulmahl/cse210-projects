@@ -10,6 +10,7 @@ class Program
         int option = 0;
         while (option != 5)
         {
+            Clear();
             var show = new SaveVehicle();
             show.ShowMenu();
             option = int.Parse(ReadLine());
@@ -17,6 +18,7 @@ class Program
             switch (option)
             {
                 case 1:
+                    Clear();
                     int subOption = 0;
                     show.ShowSubMenu();
                     subOption = int.Parse(ReadLine());
@@ -24,51 +26,51 @@ class Program
                     switch (subOption)
                     {
                         case 1:
-                            Clear();
-                            var sedan = new Sedan();
-                            vehicles.Add(sedan);
+                            // Clear();
+                            // var sedan = new Sedan();
+                            // vehicles.Add(sedan);
                         break;
 
                         case 2:
-                            Clear();
-                            var sportsCar = new SportsCar("Leather", "24\" Allow");
-                            vehicles.Add(sportsCar);
+                            // Clear();
+                            // var sportsCar = new SportsCar("Leather", "24\" Allow");
+                            // vehicles.Add(sportsCar);
                         break;
 
                         case 3:
-                            Clear();
-                            var suv = new SUV("7 Seater");
-                            vehicles.Add(suv);
+                            // Clear();
+                            // var suv = new SUV("7 Seater");
+                            // vehicles.Add(suv);
                         break;
 
                         case 4:
-                            Clear();
-                            var hatch = new Hatchback("Electric", "Pin on Top");
-                            vehicles.Add(hatch);
+                        //     Clear();
+                        //     var hatch = new Hatchback("Electric", "Pin on Top");
+                        //     vehicles.Add(hatch);
                         break;
 
                         case 5:
-                            Clear();
-                            var miniVan = new MiniVan("4 Door with Sliding Side Door ");
-                            vehicles.Add(miniVan);
+                            // Clear();
+                            // var miniVan = new MiniVan("4 Door with Sliding Side Door ");
+                            // vehicles.Add(miniVan);
                         break;
 
                         case 6:
-                            Clear();
-                            var convertible = new Convertible("Leather Roof", "Ostrich Leather Seats", "600 HP");
-                            vehicles.Add(convertible);
+                            // Clear();
+                            // var convertible = new Convertible("Leather Roof", "Ostrich Leather Seats", "600 HP");
+                            // vehicles.Add(convertible);
                         break;
 
                         case 7:
-                            Clear();
-                            var coupe = new Coupe("Lucid Red", "All Wheel Drive", "Front Engine");
-                            vehicles.Add(coupe);
+                            // Clear();
+                            // var coupe = new Coupe("Lucid Red", "All Wheel Drive", "Front Engine");
+                            // vehicles.Add(coupe);
                         break;
 
                         case 8:
-                            Clear();
-                            var crossOver = new Crossover("Tinted Windows", "8\" LCD Retina Display");
-                            vehicles.Add(crossOver);
+                            // Clear();
+                            // var crossOver = new Crossover("Tinted Windows", "8\" LCD Retina Display");
+                            // vehicles.Add(crossOver);
                         break;
 
                         default:
@@ -77,35 +79,36 @@ class Program
                 break;
 
                 case 2: // List the vehicles and their specs.
-                    Clear();
-                    int i = 0;
-                    WriteLine($"\nThe vehicles are:\n");
-                    foreach (var vehicle in vehicles)
-                    {
-                        i++;
-                        vehicle.GetVehicleSpecs(i);
-                    }
-                    WriteLine();
+                    // Clear();
+                    // int i = 0;
+                    // WriteLine($"\nThe vehicles are:\n");
+                    // foreach (var vehicle in vehicles)
+                    // {
+                    //     i++;
+                    //     vehicle.GetVehicleSpecs(i);
+                    // }
+                    // WriteLine();
                 break;
 
-                case 3:
-                    Clear(); // List the vehicles' make, model, and year.
-                    int j = 0;
-                    WriteLine($"\nThe listed vehicles are:");
-                    foreach (var vehicle in vehicles)
-                    {
-                        j++;
-                        vehicle.GetVehicle(j);
-                    }
-                    WriteLine();
+                case 3:  // List the vehicles' make, model, and year.
+                    // Clear();
+                    // int j = 0;
+                    // WriteLine($"\nThe listed vehicles are:");
+                    // foreach (var vehicle in vehicles)
+                    // {
+                    //     j++;
+                    //     vehicle.GetVehicle(j);
+                    // }
+                    // WriteLine();
                 break;
 
                 case 4: // Save to a txt file.
-                    var save = new SaveVehicle();
-                    save.Save(vehicles);
+                //     var save = new SaveVehicle();
+                //     save.Save(vehicles);
                 break;
                 
                 default:
+                    Clear();
                 break;
             }            
         }
