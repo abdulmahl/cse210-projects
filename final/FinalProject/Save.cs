@@ -34,7 +34,7 @@ public class SaveVehicle
 
     public void ShowSubMenu()
     {
-        Write($"The types of vehicles are\n");
+        WriteLine($"The types of vehicles are");
         WriteLine("  1. Sedans");
         WriteLine("  2. Sports Cars");
         WriteLine("  3. SUVs");
