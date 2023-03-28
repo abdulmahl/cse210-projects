@@ -1,6 +1,6 @@
 
 
-public class Lecture : Event
+public class Lecture : Events
 {
     private string _speaker = "";
     private int _capacity = 0;

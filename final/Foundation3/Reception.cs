@@ -1,6 +1,6 @@
 
 
-public class Reception : Event
+public class Reception : Events
 {
     private string _Email = "";
 

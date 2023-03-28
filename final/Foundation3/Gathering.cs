@@ -1,6 +1,6 @@
 using System.Text;
 
-public class Gathering : Event
+public class Gathering : Events
 {
     private string _temp = "";
     private string _condition = "";
