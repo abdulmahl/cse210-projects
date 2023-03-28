@@ -5,9 +5,8 @@ class Program
     static void Main(string[] args)
     {
         List<Video> videos = CreateList();
-        Clear();
 
-        WriteLine("Abstraction with YouTube Videos:");
+        WriteLine($"Abstraction with YouTube Videos:\n");
 
         Display(videos);
     }
@@ -22,7 +21,7 @@ class Program
             WriteLine($"{video.GetCommentCount()} Comments\n");
             foreach (var comment in video.Comments)
             {
-                WriteLine($"{comment._name}");
+                Write($"{comment._name}, ");
                 WriteLine($"{comment._comment}\n");
             }
         }
