@@ -9,9 +9,14 @@ public class Event
     private TimeOnly _timeOnly;
     private Address _address;
 
-    public Event()
+    public Event(string eventTitle, string eventType, string description, DateOnly dateOnly, TimeOnly timeOnly, Address address)
     {
-       
+       this._eventTitle = eventTitle;
+       this._eventType = eventType;
+       this._description = description;
+       this._dateOnly = dateOnly;
+       this._timeOnly = timeOnly;
+       this._address = address;
     }
 
     public string GetStdDetails()
