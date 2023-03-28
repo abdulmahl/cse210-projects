@@ -1,5 +1,3 @@
-using System.Text;
-
 public class Events
 {
     private string _eventTitle = "";
@@ -19,11 +17,21 @@ public class Events
        this._address = address;
     }
 
+    public DateOnly GetDateOnly()
+    {
+        DateOnly dateOnly = DateOnly.MaxValue.AddYears(-7976).AddDays(-19).AddMonths(-8);
+        return dateOnly;
+    }
+
+    public TimeOnly GetTimeOnly()
+    {
+        TimeOnly timeOnly = TimeOnly.MaxValue.AddHours(-8).AddMinutes(1);
+        return timeOnly;
+    }
+    
     public string GetStdDetails()
     {
-        var stdDetails = new StringBuilder();
-        stdDetails.AppendLine($"Title: {this._eventTitle}\nDescription: {this._description}\nDate: {this._dateOnly}\nTime: {this._timeOnly}\nAddress: {this._address}");
-        return stdDetails.ToString();
+        return $"Title: {this._eventTitle}\nDescription: {this._description}\nDate: {this.GetDateOnly()}\nTime: {this.GetTimeOnly()}\nAddress: {this._address.GetFullAddress()}";
     }
 
     public string GetFullDetails()

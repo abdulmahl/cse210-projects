@@ -17,7 +17,7 @@ public class Gathering : Events
     public string GetWeather()
     {
         var weatherReport = new StringBuilder();
-        weatherReport.AppendLine($"Condition: {this._condition}\nTemperature: {this._temp}\nHumidity: {this._humidity}\nChances of Rain: {this._rainChance}");
+        weatherReport.AppendLine($"Condition: {this._condition}\nTemperature: {this._temp}\nHumidity: {this._humidity}\nChances of Rain: {this._rainChance}\nWind Speed: {this._windSpeed}");
         return weatherReport.ToString();
     }
 }

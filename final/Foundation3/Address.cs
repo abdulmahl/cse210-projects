@@ -1,12 +1,9 @@
-using System.Text;
-
 public class Address
 {
     private string _streetAddress = "";
     private string _city = "";
     private string _state = "";
     private string _country = "";
-    
     public Address(string streetAddress, string city, string state, string country)
     {
         this._streetAddress = streetAddress;
@@ -17,8 +14,6 @@ public class Address
 
     public string GetFullAddress()
     {
-        var fullAddress = new StringBuilder();
-        fullAddress.AppendLine($"{this._streetAddress}, {this._city}\n{this._state}, {this._country}");
-        return fullAddress.ToString();
+        return $"{this._streetAddress}, {this._city}\n{this._state}, {this._country}";
     }
 }
