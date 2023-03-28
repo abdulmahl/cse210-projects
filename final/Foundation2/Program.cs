@@ -7,8 +7,8 @@ class Program
     {
         Clear();        
         WriteLine("Order #U098Z to the United States:");
-        Address address1 = new Address("76 Runyon Ave", "Detroit", "Michigan", "USA");
-        Customer customer1 = new Customer("Fidel Castro", address1);
+        var address1 = new Address("76 Runyon Ave", "Detroit", "Michigan", "USA");
+        var customer1 = new Customer("Fidel Castro", address1);
         Product[] products1 = 
         {
             new Product("Headphones", "XC776Q", 194.95m, 1),
@@ -27,8 +27,8 @@ class Program
         WriteLine("==================================================================");
 
         WriteLine($"\nOrder #W348X to South Africa:");
-        Address address2 = new Address("54 West Str", "Randburg", "Gauteng", "South Africa");
-        Customer customer2 = new Customer("Nomsa Nene", address2);
+        var address2 = new Address("54 West Str", "Randburg", "Gauteng", "South Africa");
+        var customer2 = new Customer("Nomsa Smuts", address2);
         Product[] products2 = 
         {
             new Product("LCD Monitor", "JV476ER", 208.35m, 1),
@@ -36,6 +36,7 @@ class Program
             new Product("MF Cloth", "TNE357G", 1.45m, 5)
         };
         var order2 = new Order(products2, customer2);
+
         Write("==================================================================");
         Write($"\nPacking Label:");
         WriteLine(order2.GetPackingLabel());

@@ -5,7 +5,6 @@ public class Order
     private Product[] _products;
     private Customer _customer;
     private decimal shippingCost;
-    // private Address _address;
 
     public Order(Product[] products, Customer customer)
     {
