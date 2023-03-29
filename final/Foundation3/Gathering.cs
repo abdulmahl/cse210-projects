@@ -8,7 +8,7 @@ public class Gathering : Events
     private string _windSpeed = "";
     private string _rainChance = "";
 
-    public Gathering(string eventTitle, string eventType, string description, DateOnly dateOnly, TimeOnly timeOnly, Address address)
+    public Gathering(string eventTitle, string eventType, string description, DateTime dateOnly, TimeOnly timeOnly, Address address)
     : base(eventTitle, eventType, description, dateOnly, timeOnly, address)
     {
         

@@ -1,16 +1,14 @@
 public class Address
 {
+    private string _venue = "";
     private string _streetAddress = "";
     private string _city = "";
-    private string _state = "";
-    private int _areaCode;
     private string _country = "";
-    public Address(string streetAddress, string city, string state,int areaCode, string country)
+    public Address(string venue, string streetAddress, string city, string country)
     {
+        this._venue = venue;
         this._streetAddress = streetAddress;
         this._city = city;
-        this._state = state;
-        this._areaCode = areaCode;
         this._country = country;
     }
 
@@ -21,6 +19,6 @@ public class Address
 
     public string GetFullAddress()
     {
-        return $"\t{this._streetAddress}\n\t{this._city}\n\t{this._state}\n\t{this._areaCode}\n\t{this._country}.";
+        return $"{this._venue}, {this._streetAddress}, {this._city}, {this._country}";
     }
 }

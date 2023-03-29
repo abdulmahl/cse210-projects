@@ -3,11 +3,11 @@ public class Events
     private string _eventTitle = "";
     private string _eventType = "";
     private string _description = "";
-    private DateOnly _dateOnly;
+    private DateTime _dateOnly = DateTime.Now.Date;
     private TimeOnly _timeOnly;
     private Address _address;
 
-    public Events(string eventTitle, string eventType, string description, DateOnly dateOnly, TimeOnly timeOnly, Address address)
+    public Events(string eventTitle, string eventType, string description, DateTime dateOnly, TimeOnly timeOnly, Address address)
     {
        this._eventTitle = eventTitle;
        this._eventType = eventType;
@@ -27,7 +27,7 @@ public class Events
         return this._eventTitle;
     }
 
-    public void SetEventTilte(string eventTitle)
+    public void SetEventTitle(string eventTitle)
     {
         this._eventTitle = eventTitle;
     }  
@@ -52,12 +52,12 @@ public class Events
         this._description = description;
     }
 
-    public DateOnly GetDateOnly()
+    public DateTime GetDateOnly()
     {
         return _dateOnly;
     }
 
-    public void SetDateOnly(DateOnly dateOnly)
+    public void SetDateOnly(DateTime dateOnly)
     {
         this._dateOnly = dateOnly;
     }

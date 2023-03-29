@@ -5,7 +5,7 @@ public class Lecture : Events
     private string _speaker = "";
     private int _capacity = 0;
 
-    public Lecture(string eventTitle, string eventType, string description, DateOnly dateOnly, TimeOnly timeOnly, Address address)
+    public Lecture(string eventTitle, string eventType, string description, DateTime dateOnly, TimeOnly timeOnly, Address address)
     : base(eventTitle, eventType, description, dateOnly, timeOnly, address)
     {
 
