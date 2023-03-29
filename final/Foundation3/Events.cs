@@ -17,21 +17,69 @@ public class Events
        this._address = address;
     }
 
+    public Events()
+    {
+
+    }
+
+    public string GetEventTitle()
+    {
+        return this._eventTitle;
+    }
+
+    public void SetEventTilte(string eventTitle)
+    {
+        this._eventTitle = eventTitle;
+    }  
+
+    public string GetEventType()
+    {
+        return this._eventType;
+    }
+
+    public void SetEventType(string eventType)
+    {
+        this._eventType = eventType;
+    }
+
+    public string GetEventDescription()
+    {
+        return this._description;
+    }
+
+    public void SetEventDescription(string description)
+    {
+        this._description = description;
+    }
+
     public DateOnly GetDateOnly()
     {
-        DateOnly dateOnly = DateOnly.MaxValue.AddYears(-7976).AddDays(-19).AddMonths(-8);
-        return dateOnly;
+        return _dateOnly;
+    }
+
+    public void SetDateOnly(DateOnly dateOnly)
+    {
+        this._dateOnly = dateOnly;
     }
 
     public TimeOnly GetTimeOnly()
     {
-        TimeOnly timeOnly = TimeOnly.MaxValue.AddHours(-8).AddMinutes(1);
-        return timeOnly;
+        return _timeOnly;
+    }
+
+    public void SetTimeOnly(TimeOnly timeOnly)
+    {
+        this._timeOnly = timeOnly;
+    }
+
+    public Address GetAddress()
+    {
+        return this._address;
     }
     
     public string GetStdDetails()
     {
-        return $"Title: {this._eventTitle}\nDescription: {this._description}\nDate: {this.GetDateOnly()}\nTime: {this.GetTimeOnly()}\nAddress: {this._address.GetFullAddress()}";
+        return $"Title: {this._eventTitle}\nDescription: {this._description}\nDate: {this.GetDateOnly()}\nTime: {this.GetTimeOnly()}\nAddress: {this.GetAddress().GetFullAddress()}";
     }
 
     public string GetFullDetails()

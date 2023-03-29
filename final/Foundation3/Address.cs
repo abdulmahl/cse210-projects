@@ -12,8 +12,13 @@ public class Address
         this._country = country;
     }
 
+    public Address()
+    {
+
+    }
+
     public string GetFullAddress()
     {
-        return $"{this._streetAddress}, {this._city}\n{this._state}, {this._country}";
+        return $"{this._streetAddress}\n       {this._city}\n       {this._state}\n       {this._country}.";
     }
 }

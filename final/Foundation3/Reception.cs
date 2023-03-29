@@ -10,6 +10,12 @@ public class Reception : Events
         
     }
 
+    public Reception()
+    : base()
+    {
+        
+    }
+
     public string GetEmail()
     {
         return this._Email;

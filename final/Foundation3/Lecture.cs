@@ -11,6 +11,12 @@ public class Lecture : Events
 
     }
 
+    public Lecture()
+    : base()
+    {
+        
+    }
+
     public string GetSpeaker()
     {
         return this._speaker;
