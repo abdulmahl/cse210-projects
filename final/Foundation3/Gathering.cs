@@ -14,12 +14,6 @@ public class Gathering : Events
         
     }
 
-    public Gathering()
-    : base()
-    {
-
-    }
-
     public string GetTemperature()
     {
         return this._temp;

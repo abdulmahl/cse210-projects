@@ -12,11 +12,6 @@ public class Address
         this._country = country;
     }
 
-    public Address()
-    {
-
-    }
-
     public string GetFullAddress()
     {
         return $"{this._venue}, {this._streetAddress}, {this._city}, {this._country}";

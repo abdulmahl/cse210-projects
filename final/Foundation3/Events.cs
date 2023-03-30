@@ -1,3 +1,4 @@
+using static System.Console;
 public class Events
 {
     private string _eventTitle = "";
@@ -15,11 +16,6 @@ public class Events
        this._dateOnly = dateOnly;
        this._timeOnly = timeOnly;
        this._address = address;
-    }
-
-    public Events()
-    {
-
     }
 
     public string GetEventTitle()
@@ -89,6 +85,6 @@ public class Events
 
     public string GetShortDescription()
     {
-        return this._eventType + " " + this._eventTitle + " " + this._dateOnly;
+        return this._eventType + ", " + this._eventTitle + ", " + this._dateOnly;
     }
 }
