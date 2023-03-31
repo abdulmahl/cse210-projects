@@ -7,11 +7,13 @@ public class Gathering : Events
     private string _humidity = "";
     private string _windSpeed = "";
     private string _rainChance = "";
+    private string _eventType = "";
 
-    public Gathering(string eventTitle, string speaker, string eventType, string description, string dateOnly, TimeOnly startTime, TimeOnly endTime, Address address)
-    : base(eventTitle, speaker, eventType, description, dateOnly, startTime, endTime, address)
+
+    public Gathering(string eventTitle, string description, string dateOnly, TimeOnly startTime, TimeOnly endTime, Address address, string eventType)
+    : base(eventTitle, description, dateOnly, startTime, endTime, address)
     {
-        
+        this._eventType = eventType;
     }
 
     public string GetTemperature()
@@ -64,8 +66,19 @@ public class Gathering : Events
         this._rainChance = rainChance;
     }
 
-    public string GetWeather()
+    public string GetStdDetailsGathering()
     {
-        return ($"Condition: {this.GetCondition()}\nTemperature: {this.GetTemperature()}\nHumidity: {this._humidity}\nChances of Rain: {this._rainChance}\nWind Speed: {this._windSpeed}");
+        return $"Title: {base._eventTitle}\nDescription: {base._description}\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address}\n";
+    }
+
+    public string GetFullDetailsGathering()
+    {
+        return "";
+    }
+
+  
+    public string GetShortDescriptionGathering()
+    {
+        return $"Event Type: {this._eventType}\nEvent Title: {base._eventTitle}\nEvent Date: {base._dateOnly}";
     }
 }
