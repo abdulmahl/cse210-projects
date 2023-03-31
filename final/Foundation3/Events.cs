@@ -2,70 +2,24 @@ using static System.Console;
 public class Events
 {
     private string _eventTitle = "";
+    private string _eventSpeaker = "";
     private string _eventType = "";
     private string _description = "";
-    private DateTime _dateOnly = DateTime.Now.Date;
-    private TimeOnly _timeOnly;
+    private string _dateOnly;
+    private TimeOnly _startTime;
+    private TimeOnly _endTime;
     private Address _address;
 
-    public Events(string eventTitle, string eventType, string description, DateTime dateOnly, TimeOnly timeOnly, Address address)
+    public Events(string eventTitle, string speaker, string eventType, string description, string dateOnly, TimeOnly startTime, TimeOnly endTime, Address address)
     {
        this._eventTitle = eventTitle;
+       this._eventSpeaker = speaker;
        this._eventType = eventType;
        this._description = description;
        this._dateOnly = dateOnly;
-       this._timeOnly = timeOnly;
+       this._startTime = startTime;
+       this._endTime = endTime;
        this._address = address;
-    }
-
-    public string GetEventTitle()
-    {
-        return this._eventTitle;
-    }
-
-    public void SetEventTitle(string eventTitle)
-    {
-        this._eventTitle = eventTitle;
-    }  
-
-    public string GetEventType()
-    {
-        return this._eventType;
-    }
-
-    public void SetEventType(string eventType)
-    {
-        this._eventType = eventType;
-    }
-
-    public string GetEventDescription()
-    {
-        return this._description;
-    }
-
-    public void SetEventDescription(string description)
-    {
-        this._description = description;
-    }
-
-    public DateTime GetDateOnly()
-    {
-        return _dateOnly;
-    }
-
-    public void SetDateOnly(DateTime dateOnly)
-    {
-        this._dateOnly = dateOnly;
-    }
-
-    public TimeOnly GetTimeOnly()
-    {
-        return _timeOnly;
-    }
-
-    public void SetTimeOnly(TimeOnly timeOnly)
-    {
-        this._timeOnly = timeOnly;
     }
 
     public Address GetAddress()
@@ -75,7 +29,7 @@ public class Events
     
     public string GetStdDetails()
     {
-        return $"Title: {this._eventTitle}\nDescription: {this._description}\nDate: {this.GetDateOnly()}\nTime: {this.GetTimeOnly()}\nAddress: {this.GetAddress().GetFullAddress()}";
+        return $"Title: {this._eventTitle}\nSpeaker: {this._eventSpeaker}\n\nDescription: {this._description}\n\nDate: {this._dateOnly}\nTime: {this._startTime} - {this._endTime}\n\nLocation: {this.GetAddress().GetFullAddress()}";
     }
 
     public string GetFullDetails()
@@ -85,6 +39,6 @@ public class Events
 
     public string GetShortDescription()
     {
-        return this._eventType + ", " + this._eventTitle + ", " + this._dateOnly;
+        return $"Event Type: {this._eventType}\nEvent Title: {this._eventTitle}\nEvent Date: {this._dateOnly}";
     }
 }
