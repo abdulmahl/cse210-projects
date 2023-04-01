@@ -4,26 +4,30 @@ class Program
 {
     static void Main(string[] args)
     {
+        Clear();
         List<Video> videos = CreateList();
-
-        WriteLine($"Abstraction with YouTube Videos:\n");
 
         Display(videos);
     }
 
     public static void Display(List<Video> videos)
     {
+        int i = 0;
         foreach (Video video in videos)
         {
+            i++;
+            WriteLine($"({i})");
             WriteLine($"Author: {video._author}");
             WriteLine($"Title: {video._title}");
-            WriteLine($"Length: {video._length} Seconds\n");
+            WriteLine($"Length: {video._length} Seconds");
             WriteLine($"{video.GetCommentCount()} Comments\n");
             foreach (var comment in video.Comments)
             {
                 Write($"{comment._name}, ");
                 WriteLine($"{comment._comment}\n");
             }
+            WriteLine("---------------------------------------------------------------------------");
+            WriteLine();
         }
     }
 
