@@ -1,6 +1,6 @@
 using static System.Console;
 
-public class Activity
+public abstract class Activity
 {
     private DateOnly _dateOnly;
     private int _lengthMinutes = 0;
@@ -8,4 +8,6 @@ public class Activity
     {
 
     }
+
+    public abstract string GetSummary();
 }

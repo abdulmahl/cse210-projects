@@ -8,4 +8,9 @@ public class Swimming : Activity
     {
         
     }
+
+    public override string GetSummary()
+    {
+        throw new NotImplementedException();
+    }
 }

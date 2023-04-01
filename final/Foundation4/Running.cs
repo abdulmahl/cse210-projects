@@ -8,4 +8,9 @@ public class Running : Activity
     {
         
     }
+
+    public override string GetSummary()
+    {
+        throw new NotImplementedException();
+    }
 }
