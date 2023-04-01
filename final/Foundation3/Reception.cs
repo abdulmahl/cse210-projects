@@ -16,12 +16,12 @@ public class Reception : Events
 
     public string GetStdDetailsReception()
     {
-        return $"Title: {base._eventTitle}\nDescription: {base._description}\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address}\nRSVP: {this._Email}\nContact: {this._phoneNumber} For more information";
+        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}";
     }
 
     public string GetFullDetailsReception()
     {
-        return "";
+        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}\n\nRSVP: {this._Email}\nContact: {this._phoneNumber} For more information";
     }
 
     public string GetShortDescriptionReception()

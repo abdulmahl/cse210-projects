@@ -68,12 +68,12 @@ public class Gathering : Events
 
     public string GetStdDetailsGathering()
     {
-        return $"Title: {base._eventTitle}\nDescription: {base._description}\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address}\n";
+        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}";
     }
 
     public string GetFullDetailsGathering()
     {
-        return "";
+        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}";
     }
 
   
