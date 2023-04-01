@@ -2,7 +2,8 @@ using System.Text;
 
 public class Gathering : Events
 {
-    private string _temp = "";
+    private string _tempMax = "";
+    private string _tempMin = "";
     private string _condition = "";
     private string _humidity = "";
     private string _windSpeed = "";
@@ -10,20 +11,27 @@ public class Gathering : Events
     private string _eventType = "";
 
 
-    public Gathering(string eventTitle, string description, string dateOnly, TimeOnly startTime, TimeOnly endTime, Address address, string eventType)
+    public Gathering(string eventTitle, string description, string dateOnly, TimeOnly startTime, TimeOnly endTime, Address address, string eventType, string tempMax, string tempMin, string condition, string humidity, string windSpeed, string rainChance)
     : base(eventTitle, description, dateOnly, startTime, endTime, address)
     {
+        this._tempMax = tempMax;
+        this._tempMin = tempMin;
+        this._condition = condition;
+        this._humidity = humidity;
+        this._windSpeed = windSpeed;
+        this._rainChance = rainChance;
         this._eventType = eventType;
     }
 
-    public string GetTemperature()
+
+    public string GetTemperatureMax()
     {
-        return this._temp;
+        return this._tempMax;
     }
 
-    public void SetTemperature(string temp)
+    public string GetTemperatureMin()
     {
-        this._temp = temp;
+        return this._tempMin;
     }
 
     public string GetCondition()
@@ -31,19 +39,9 @@ public class Gathering : Events
         return this._condition;
     }
 
-    public void SetCondition(string condition)
-    {
-        this._condition = condition;
-    }
-
     public string GetHumidity()
     {
         return this._humidity;
-    }
-
-    public void SetHumidity(string humidity)
-    {
-        this._humidity = humidity;
     }
 
     public string GetWindSpeed()
@@ -51,19 +49,9 @@ public class Gathering : Events
         return this._windSpeed;
     }
 
-    public void SetWindSpeed(string windSpeed)
-    {
-        this._windSpeed = windSpeed;
-    }
-
     public string GetRainChance()
     {
         return this._rainChance;
-    }
-
-    public void SetRainChange(string rainChance)
-    {
-        this._rainChance = rainChance;
     }
 
     public string GetStdDetailsGathering()
@@ -73,7 +61,7 @@ public class Gathering : Events
 
     public string GetFullDetailsGathering()
     {
-        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}";
+        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}\n\nTemp Max: {this.GetTemperatureMax()}\nTemp Min: {this.GetTemperatureMin()}\nCondition: {this.GetCondition()}\nHumidity: {this.GetHumidity()}\nWind Speed: {this.GetWindSpeed()}\nChances of Rain: {this.GetRainChance()}";
     }
 
   

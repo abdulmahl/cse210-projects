@@ -73,20 +73,20 @@ class Program
         var endTime3 = new TimeOnly(21, 00);
 
         var addressGathering = new Address("HM Pitje Stadium", "44 Corner Seluma & Fourth Street", "Mamelodi", "South Africa");
-        Gathering gatheringDetails = new Gathering("\"Digital Marketing Summit\"", "The Digital Marketing Summit is a gathering event that brings together experts, thought leaders, and industry professionals to discuss the latest trends, strategies, and best practices in digital marketing. The summit provides an opportunity for attendees to learn from and network with some of the top minds in the industry.The event typically features keynote presentations, panel discussions, and workshops covering a range of topics such as search engine optimization (SEO), social media marketing, email marketing, content marketing, and analytics. Attendees can expect to gain valuable insights and practical advice on how to improve their digital marketing efforts and achieve better results.", formattedDate3, startTime3, endTime3, addressGathering, "Gathering");
-        WriteLine("Standard Details: Gathering");
+        Gathering gatheringDetails = new Gathering("\"Digital Marketing Summit\"", "The Digital Marketing Summit is a gathering event that brings together experts, thought leaders, and industry professionals to discuss the latest trends, strategies, and best practices in digital marketing. The summit provides an opportunity for attendees to learn from and network with some of the top minds in the industry.The event typically features keynote presentations, panel discussions, and workshops covering a range of topics such as search engine optimization (SEO), social media marketing, email marketing, content marketing, and analytics. Attendees can expect to gain valuable insights and practical advice on how to improve their digital marketing efforts and achieve better results.", formattedDate3, startTime3, endTime3, addressGathering, "Outdoor Gathering", "26 °C", "17 °C", "Sunny", "89%", ".38 km/ph", "20%");
+        WriteLine("Standard Details: Outdoor Gathering");
         WriteLine("***********************************************************************************************");
         WriteLine(gatheringDetails.GetStdDetailsGathering());
         WriteLine("***********************************************************************************************");
         WriteLine();
     
-        WriteLine("Full Details: Gathering");
+        WriteLine("Full Details: Outdoor Gathering");
         WriteLine("************************************************************************************************");
         WriteLine(gatheringDetails.GetFullDetailsGathering());
         WriteLine("*************************************************************************************************");
         WriteLine();
     
-        WriteLine("Short Description: Gathering");
+        WriteLine("Short Description: Outdoor Gathering");
         WriteLine("***********************************************");
         WriteLine(gatheringDetails.GetShortDescriptionGathering()); 
         WriteLine("***********************************************");
