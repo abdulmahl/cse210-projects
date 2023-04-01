@@ -6,7 +6,7 @@ class Program
     static void Main(string[] args)
     {
         Clear();        
-        WriteLine("Order #U098Z to the United States:");
+        WriteLine($"(1). Order #U098Z to the United States:");
         var address1 = new Address("76 Runyon Ave", "Detroit", "Michigan", "USA");
         var customer1 = new Customer("Fidel Castro", address1);
         Product[] products1 = 
@@ -26,7 +26,7 @@ class Program
         WriteLine($"\t\t\t\tTotal Cost: ${order1.GetTotalCost()}");
         WriteLine("==================================================================");
 
-        WriteLine($"\nOrder #W348X to South Africa:");
+        WriteLine($"\n(2). Order #W348X to South Africa:");
         var address2 = new Address("54 West Str", "Randburg", "Gauteng", "South Africa");
         var customer2 = new Customer("Nomsa Smuts", address2);
         Product[] products2 = 
