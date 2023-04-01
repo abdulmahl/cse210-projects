@@ -56,12 +56,12 @@ public class Gathering : Events
 
     public string GetStdDetailsGathering()
     {
-        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}";
+        return $"Title: {base._eventTitle}\n\nDescription:\n{base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}";
     }
 
     public string GetFullDetailsGathering()
     {
-        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}\n\nTemp Max: {this.GetTemperatureMax()}\nTemp Min: {this.GetTemperatureMin()}\nCondition: {this.GetCondition()}\nHumidity: {this.GetHumidity()}\nWind Speed: {this.GetWindSpeed()}\nChances of Rain: {this.GetRainChance()}";
+        return $"Title: {base._eventTitle}\n\nDescription:\n{base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}\n\nTemp Max: {this.GetTemperatureMax()}\nTemp Min: {this.GetTemperatureMin()}\nCondition: {this.GetCondition()}\nHumidity: {this.GetHumidity()}\nWind Speed: {this.GetWindSpeed()}\nChances of Rain: {this.GetRainChance()}";
     }
 
   

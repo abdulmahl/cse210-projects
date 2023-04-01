@@ -48,7 +48,7 @@ class Program
         var endTime2 = new TimeOnly(23, 00);
 
         var addressReception = new Address("Ninety II @ Revonia", "92 Revonia Street", "Sandton", "South Africa");
-        Reception receptionDetails = new Reception($"\"Cocktails & Conversation: An Evening of Networking\"", "Cocktails & Conversation: An Evening of Networking is the perfect event for anyone looking to expand their professional circle, gain exposure to new ideas and trends, or simply enjoy an evening of good company and conversation. Guests are encouraged to mingle, exchange business cards, and strike up conversations with other attendees. The atmosphere is lively, yet sophisticated, creating an ideal setting for building relationships and exploring new opportunities.", formattedDate2, startTime2, endTime2, addressReception, "Reception", "scoltz223419@gui.io", "+27 76 600 1606");
+        Reception receptionDetails = new Reception($"\"Cocktails & Conversation: An Evening of Networking\"", "Cocktails & Conversation: An Evening of Networking is the perfect event for anyone looking to expand their professional circle, gain exposure to new ideas and trends, or simply enjoy an evening of good company and conversation. Guests are encouraged to mingle, exchange business cards, and strike up conversations with other attendees. The atmosphere is lively, yet sophisticated, creating an ideal setting for building relationships and exploring new opportunities.", formattedDate2, startTime2, endTime2, addressReception, "Reception", "scoltz92@reception.co.za", "+27 (076) 600 1606");
         WriteLine("Standard Details: Reception");
         WriteLine("***************************************************************************************************");
         WriteLine(receptionDetails.GetStdDetailsReception());
@@ -62,9 +62,9 @@ class Program
         WriteLine();
 
         WriteLine("Short Description: Reception");
-        WriteLine("************************************************************************");
+        WriteLine("****************************************************************");
         WriteLine(receptionDetails.GetShortDescriptionReception());
-        WriteLine("************************************************************************");
+        WriteLine("****************************************************************");
         WriteLine();
 
         var dateOnly3 = new DateOnly();

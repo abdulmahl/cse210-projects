@@ -16,12 +16,12 @@ public class Lecture : Events
 
     public string GetStdDetailsLecture()
     {
-        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}";
+        return $"Title: {base._eventTitle}\n\nDescription:\n{base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}";
     }
 
     public string GetFullDetailsLecture()
     {
-        return $"Title: {base._eventTitle}\n\nDescription: {base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}\n\nSpeaker: {this._speaker}\nLimited Capacity: {this._capacity} Seated";
+        return $"Title: {base._eventTitle}\n\nDescription:\n{base._description}\n\nDate: {base._dateOnly}\nTime: {base._startTime} - {base._endTime}\nLocation: {base._address.GetFullAddress()}\n\nSpeaker: {this._speaker}\nLimited Capacity: {this._capacity} Seated";
 
     }
 
