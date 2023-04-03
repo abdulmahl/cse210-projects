@@ -22,7 +22,7 @@ class Program
             Write($"How much would you like to deposit? ");
             double deposit = double.Parse(ReadLine());
             currentUser.SetBalance(currentUser.GetBalance() + deposit);
-            WriteLine($"Thank you for your deposit of ${deposit}");
+            WriteLine($"Thank you for your deposit of ${deposit}.00");
             WriteLine($"\nYour balance is now: ${currentUser.GetBalance() + deposit}\n");
         }
 
@@ -47,10 +47,10 @@ class Program
             WriteLine($"\nYour current balance is: ${currentUser.GetBalance()}\n");
         }
 
-        cHolders.Add(new CardHolder("Abdul", "Malik", 777733399, 1242, 998.12));
-        cHolders.Add(new CardHolder("Lenny", "Kimbo", 0987439901, 8342, 1238.17));
-        cHolders.Add(new CardHolder("Jake", "Jacobson", 993459901, 9842, 98.87));
-        cHolders.Add(new CardHolder("Linda", "Mason", 633399901, 3442, 258.57));
+        cHolders.Add(new CardHolder("Abdul", "Malik", 777733399, 1242, 0.00));
+        cHolders.Add(new CardHolder("Lenny", "Kimbo", 0987439901, 8342, 0.00));
+        cHolders.Add(new CardHolder("Jake", "Jacobson", 993459901, 9842, 0.00));
+        cHolders.Add(new CardHolder("Linda", "Mason", 633399901, 3442, 0.00));
         
         WriteLine("Welcome to the simple ATM");
         Write("Insert card to continue. ");
