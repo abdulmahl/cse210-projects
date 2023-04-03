@@ -21,7 +21,7 @@ class Program
         {
             Write($"How much would you like to deposit? ");
             double deposit = double.Parse(ReadLine());
-            currentUser.SetBalance(currentUser.GetBalance() + deposit);
+            // currentUser.SetBalance(deposit);
             WriteLine($"Thank you for your deposit of ${deposit}.00");
             WriteLine($"\nYour balance is now: ${currentUser.GetBalance() + deposit}\n");
         }
@@ -44,7 +44,8 @@ class Program
 
         void balance(CardHolder currentUser)
         {
-            WriteLine($"\nYour current balance is: ${currentUser.GetBalance()}\n");
+            double deposit = 0;
+            WriteLine($"\nYour current balance is: ${currentUser.GetBalance() + deposit}\n");
         }
 
         cHolders.Add(new CardHolder("Abdul", "Malik", 777733399, 1242, 0.00));
