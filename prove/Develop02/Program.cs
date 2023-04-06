@@ -1,4 +1,3 @@
-using System;
 using static System.Console;
 
 //  In a do while loop the Program displays the menu of options,
